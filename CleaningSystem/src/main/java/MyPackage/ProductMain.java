@@ -1,16 +1,17 @@
 package MyPackage;
 
 import java.util.ArrayList;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
 public class ProductMain {
 	public  String id;
 	public String type;
-/*	public static boolean create;
+//	public static boolean create;
 	public static boolean inwait=false;
 	public static boolean incleaning=false;
-	public static boolean completed=false;*/
+	public static boolean completed=false;
 	public String name;
 	public String image;
 	public String description;
@@ -97,50 +98,95 @@ public class ProductMain {
 		
 	}
 	public static boolean productInWaiting() {
-		boolean flag=false;
-		for(int i=0;i<prod.size();i++)
+		  
+		  boolean timeout=false;
+		 CountDownLatch semaphore = new CountDownLatch(1);
+	
+
+		  //waiting code
+		  try {
+			  
+			 timeout = !semaphore.await(2, TimeUnit.SECONDS);
+			 inwait=true;
+				
+			//semaphore.equals(TIMED_WAITING);
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		  //releasing code
+		  semaphore.countDown();
+		
+		
+		return inwait;
+		/*
+		 for(int i=0;i<prod.size();i++)
+		
 		{
 			
 			/*if(prod.get(i).inwait==false) {
 				System.out.println("Product "+ProductMain.prod.get(i).id+" "+ProductMain.prod.get(i).name);
 				//TimeUnit.MINUTES.sleep(10);
 				prod.get(i).inwait=true;
-				flag=true;*/
+				flag=true;
 			//}
 			
-		}
+		} */ 
 		//return inwait;
-		return true;
+	
 	}
 	public static boolean productInCleaning() {
 			
-			for(int i=0;i<prod.size();i++)
-			{
-				/*if(prod.get(i).incleaning==false && prod.get(i).inwait==true) {
-					//TimeUnit.MINUTES.sleep(40);
-					prod.get(i).incleaning=true;*/
-			//	}
+		 boolean timeout=false;
+		 if(inwait ) {
+		 CountDownLatch semaphore = new CountDownLatch(1);
+	
+
+		  //waiting code
+		  try {
+			 timeout = !semaphore.await(2, TimeUnit.SECONDS);
+			 incleaning =true;
 				
-			}
-			//return incleaning;
-	return true;
+			//semaphore.equals(TIMED_WAITING);
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		  //releasing code
+		  semaphore.countDown();
+		
+		 }
+		return incleaning;
 		}
 	
 
 		public static boolean productCompleted() {
-			ProductMain PP=new ProductMain();
-			
-		/*	for(int i=0;i<prod.size();i++)
-			{
-				if(prod.get(i).completed==false || prod.get(i).incleaning==true || prod.get(i).inwait==true) {
-					//TimeUnit.MINUTES.sleep(15);
-					prod.get(i).completed=true;
+			boolean timeout=false;
+			 if(inwait && incleaning) {
+			 CountDownLatch semaphore = new CountDownLatch(1);
+		
+
+			  //waiting code
+			  try {
+				 timeout = !semaphore.await(2, TimeUnit.SECONDS);
+				 completed =true;
 					
-				}
+				//semaphore.equals(TIMED_WAITING);
 				
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-			return completed;*/
-			return true;
+
+			  //releasing code
+			  semaphore.countDown();
+			
+			 }
+			return completed;
 		}
 	public static void delivary() {
 				
@@ -167,6 +213,31 @@ public class ProductMain {
 			flagagent=false;
 		return flagagent;
 		
+	}
+	public static int numberprodag(int n) {
+		int k=500;
+	
+		int j= (int) (500 - 2*Math.random());
+		
+		return j;
+	}
+	public static int numberprodeq() {
+		int k=120;
+	
+		int j=(int) (120 - 2*Math.random());
+		
+		return j;
+	}
+	public static int proderror() {
+		int exact=100;
+		int approx=(int)(100 * Math.random());
+		if(approx >=40) {
+			approx-=40;
+		}
+	    int j=(int) (exact-approx);
+		 
+		
+		return j;
 	}
 	public static void main (String[] args) {
 		/*
@@ -278,6 +349,11 @@ public class ProductMain {
 					 +prod.get(i).specialtreatment+prod.get(i).type);
 		}*/
 	
+	}
+	public String getID() {
+		
+		// TODO Auto-generated method stub
+		return id;
 	}
 	
 	

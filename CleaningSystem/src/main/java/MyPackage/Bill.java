@@ -46,5 +46,13 @@ public class Bill {
 			//System.out.println(h.priceProd("ss"));
 		}
 	}
+	public double getPrice() {
+		// TODO Auto-generated method stub
+		return price;
+	}
+	public double getTotalPrice() {
+		// TODO Auto-generated method stub
+		return totalprice;
+	}
 	
 }

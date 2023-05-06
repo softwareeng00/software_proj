@@ -24,7 +24,9 @@ public class Customer {
 	public String id;
 	public String name;
 	public String Address;
-	public String phone;
+	public static ArrayList<String> phone1 =new ArrayList<String>() ;
+
+public String phone;
 	private String Email;
 	private String password;
 	public int reguser=0;
@@ -36,6 +38,7 @@ public class Customer {
 		this.Address="Nablus";
 		this.Email="ayamoinn@gmail.com";
 		this.password="useruser";
+		phone1.add("0687347273");
 		this.phone="0687347273";
 		user1.add(this);
 		if (!pass.contains("useruser"))
@@ -98,6 +101,16 @@ public class Customer {
 		}
 		
 		return 0;*/
+		
+	}
+	public int checkPhone(String num)
+	{
+		for(int i=0;i<phone1.size();i++)
+		{
+			if(num.equals(phone1.get(i)));
+			return 1;
+		}
+	return 1;
 		
 	}
 	/*public void deleteCustomer(String id)

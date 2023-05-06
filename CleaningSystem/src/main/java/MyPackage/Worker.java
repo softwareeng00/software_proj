@@ -114,12 +114,33 @@ public class Worker {
 	}
 	
 	public static void printWorker() {
-		System.out.println("Aya Moin " +"ayamoinn44@gmail.com\n"+
+		System.out.println("Name         " +"Email    \n"+
+				           "Aya Moin     " +"ayamoinn44@gmail.com\n"+
 				           "Mohmed samer " +"mohmd55t44@gmail.com\n"+
-				           "jad mohmd " +"jadmohmd33@gmail.com\n");
+				           "jad mohmd    " +"jadmohmd33@gmail.com\n");
 	}
 	
+	public static void Workername()
+	{
+		System.out.println("Name" +
+		           "Aya Moin\n"+
+		           "Mohmed samer\n"+
+		           "jad mohmd\n\n");
+}
 	
+	
+	public static void prodinclean() {
+		System.out.println("Name         " +"    Number    \n"+
+		           "Canves1     " +"      1\n"+
+		           "Canves + Cover " +"   2\n"+
+		           "Cover    " +"         3\n");
+	}
+	public static void breakTime()
+	{
+		System.out.println("\n Your Work Start at 8:30  to 4:00");
+
+		System.out.println("\n Your break at 11:00 to 11:30 / break at 2:00 to 2:40");
+	}
 
 	public String getName() {
 		return name;
@@ -151,6 +172,10 @@ public class Worker {
 
 	public void setBirthdate(Date birthdate) {
 		this.birthdate = birthdate;
+	}
+	public void addOrder(ProductMain order) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

@@ -1,5 +1,6 @@
 package MyPackage;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -15,7 +16,8 @@ public class Main {
 		Scanner scc = new Scanner(System.in);
 		boolean flagadmin=false;
 		String nameofprod=null;
-		int height=1;int width=1;int countprod=0;
+		int height=1;int width=1;
+		int countprod=0;int countprod1=0;
 		boolean flagworker=false;
 		boolean flaguser=false;
 		boolean flagaccount=false;
@@ -76,12 +78,36 @@ public class Main {
 					pr.deleteProduct(PRO);
                 	break;
                 case 6:
-                	
-                	System.out.print("Show Product In Waiting : ");
+                	if(countprod1==0)
+                	countprod1=1;
+                	/*System.out.print("Show Product In Waiting : ");
 					String Wait=scc.next();
 					ProductMain po=new ProductMain();
-					ProductMain.productInWaiting();
+					ProductMain.productInWaiting();*/
+                	System.out.println("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+                	System.out.println("* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
+                			         + "* powders and materials to deal with all kinds of stains and dirt                    *");
+                	int y=ProductMain.numberprodag(countprod);
+                	System.out.println("* Number of cleaning agent in the system :"+y+"                                        *");
+                	System.out.println("* The number of missing cleaning agent must be provided :"+ (500-y)+"                           *");
+                	int z=ProductMain.numberprodeq();
+                	System.out.println("* The number of cleaning equipment :"+z+"                                              *");
+                	System.out.println("* The number of cleaning equipment that needs maintenance :"+(120-z)+"                         *");
+                	int l=ProductMain.proderror();
+                	System.out.println("* Carpet cleaning percentage  : "+(l) +"%                                                  *");
+                	System.out.println("* Carpet cleaning percentage error: "+( 100 -l) +"%                                              *");
+                	System.out.println("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
 					break;
+                case 7:
+                	Transaction a =new Transaction();
+                	a.getCashPaid();
+                	a.getDebtPaid();
+                	a.getPrice();
+                	System.out.print("The total cash offerd is 7500 \n");
+                	System.out.print("The Total dept is 1500\n");
+                	System.out.print("The Price for a piece is 500\n");
+                	
+                	break;
                 
 				
 				
@@ -126,13 +152,28 @@ public class Main {
             
 
 			do
-			{
+			{//////worker
 				 if(flagworker) {
 				userselected2 =Workermenu();
 				switch(userselected2)
 				{
 				
 				case 1:
+					
+					Worker.prodinclean();
+
+					
+					break;
+				case 2:
+					Worker.Workername();
+
+					break;
+				case 3:
+					Worker.breakTime();
+					break;
+				case 4:
+					userselected =firstMenu();
+
 					break;
 				}
 			
@@ -204,7 +245,7 @@ public class Main {
 				}
 				M.createProduct(g.toString(), M.type, nameofprod, M.image, M.description, M.specialtreatment,M.high,M.width);
 				System.out.println("Your product added to the system\n");
-				countprod++;
+				countprod++;countprod1++;
 				flagintitail=true;
 			//	ProductMain.printProduct();
 			//	System.out.println("\n");
@@ -282,17 +323,20 @@ public class Main {
 				System.out.println("");
 				break;
 			case 5:
-				
-				break;
+				if(ProductMain.productInWaiting() || ProductMain.productInCleaning() || ProductMain.productInCleaning())
+					 System.out.println("Product finished wait state and go to cleaning state");
+					else
+						System.out.println("State Product in Cleaning ");
+					break;
 			case 6:
 				int o1=0;
 				Bill c=new Bill();
-				if(flagintitail) {
+				if(flagintitail ) {
 					flagintitail=false;
-					
+					if(!emails.equals("ayamoinn@gmail.com")){
 					o1=c.discountInPrice10(pr1,5);
 					System.out.println("Price before Discount : "+pr1);
-					System.out.println("Price after Discount : "+o1);
+					System.out.println("Price after Discount : "+o1);}
 					
 				}
 				if(pr1>600) {
@@ -310,6 +354,7 @@ public class Main {
 					  System.out.println("Price after Discount : "+y);
 				}
 				break;
+		
 				}
 			
 			
@@ -331,8 +376,8 @@ public class Main {
 		 
 		while(userselected3<7 );
 		{    
-			 if(flaguser)
-			System.out.printf(" input error \n Please Try Again \n");
+			 //if(flaguser)
+			//System.out.printf(" input error \n Please Try Again \n");
 
 			userselected =firstMenu();
 			
@@ -360,15 +405,15 @@ public class Main {
 		int selection ;
 		 Scanner sc = new Scanner(System.in);
 		 
-		    System.out.println("★★★★★★★★★★★★★★★★★★★★★");
-		    System.out.println("★        Welcome:          ★");
-		    System.out.println("★★★★★★★★★★★★★★★★★★★★★");
-			System.out.println("★        Login as :        ★");
-			System.out.println("★        1- Admin          ★");
-			System.out.println("★        2- Worker         ★");
-			System.out.println("★        3- Customer       ★");
-			System.out.println("★        4- Exit           ★");
-			System.out.println("★★★★★★★★★★★★★★★★★★★★★");
+		    System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
+		    System.out.println("★        Welcome:            ★");
+		    System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
+			System.out.println("★        Login as :          ★");
+			System.out.println("★        1- Admin            ★");
+			System.out.println("★        2- Worker           ★");
+			System.out.println("★        3- Customer         ★");
+			System.out.println("★        4- Exit             ★");
+			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
 			System.out.print("Select your option : ");
 			selection=sc.nextInt();
 			
@@ -386,14 +431,14 @@ public class Main {
 		 Scanner sc = new Scanner(System.in);
 		
 		    System.out.println("          Admin");
-			System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★");
+			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
 			System.out.println("★	1- Show customer       ★");
 			System.out.println("★	2- Show Product	       ★");
 			System.out.println("★	3- Show worker         ★");
 			System.out.println("★	4- Delete Customer     ★");
 			System.out.println("★	5- Delete Product      ★");
 			System.out.println("★	6- report              ★");
-			System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★");
+			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
 			System.out.print("Select your option : ");
 			selection=sc.nextInt();
 
@@ -408,15 +453,15 @@ public class Main {
 		 Scanner sc = new Scanner(System.in);
 		
 
-		    System.out.println("         Customer");
-		    System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
+		    System.out.println("            Customer");
+		    System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
 			System.out.println("★	1- Add Product		    ★");
 			System.out.println("★	2- Updtate Product	    ★");
 			System.out.println("★	3- Delete Product	    ★");
 			System.out.println("★	4- get bill	            ★");
 			System.out.println("★	5- get Order Status         ★");
 			System.out.println("★	6- discount                 ★");
-			System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
+			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
 			System.out.print("Select your option : ");
 			
 
@@ -437,13 +482,17 @@ public class Main {
 		 
 
 		    System.out.println("          Worker");
-			System.out.println("★★★★★★★★★★★★★★★★★★★★★");
-			System.out.println("★    1- Add Product       ★");
-			System.out.println("★    2- Updtate Product   ★");
-			System.out.println("★    3- Delete Product    ★");
-			System.out.println("★    5- get bill          ★");
-			System.out.println("★    6- get Order Status  ★");
-			System.out.println("★★★★★★★★★★★★★★★★★★★★★");
+			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+			System.out.println("★    1- Show Products     ★");
+			System.out.println("★    2- Show Worker Team     ★");
+			System.out.println("★    3- Show Worker Time      ★");
+			System.out.println("★    4- Main Menu      ★");
+
+
+			System.out.println("★              ★");
+			//System.out.println("★    3- update state           ★");
+			//System.out.println("★    3- Number of Carpet             ★");
+			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
 			System.out.println("Select your option : ");
 
 			selection=sc.nextInt();
@@ -463,12 +512,12 @@ public class Main {
 		 Scanner sc = new Scanner(System.in);
 		 
 		System.out.println("       Welcome");
-		System.out.println("★★★★★★★★★★★★★★★★★★★★★");
-		System.out.println("★  Select your option     ★");
-		System.out.println("★  1- Create customer     ★");
-		System.out.println("★  2- add customer        ★");
-		System.out.println("★  3- delete customer     ★");
-		System.out.println("★★★★★★★★★★★★★★★★★★★★★");
+		System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+		System.out.println("★  Select your option      ★");
+		System.out.println("★  1- Create customer      ★");
+		System.out.println("★  2- add customer         ★");
+		System.out.println("★  3- delete customer      ★");
+		System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
 		System.out.println("Your selected option is: ");
 
 		selection=sc.nextInt();
