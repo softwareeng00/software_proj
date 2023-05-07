@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import io.cucumber.java.it.Date;
 
 public class Worker {
+	int aya;
 	int id;
 	private String name;
 	private String Address;

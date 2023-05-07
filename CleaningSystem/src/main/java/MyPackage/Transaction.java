@@ -2,6 +2,7 @@ package MyPackage;
 import java.util.List;
 
 public class Transaction {
+	int aya;
 	Bill b=new Bill();
 	ProductMain p=new ProductMain();
     

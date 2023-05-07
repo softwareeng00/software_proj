@@ -8,7 +8,7 @@ import io.cucumber.java.it.Date;
 
 
 public class Customer {
-
+	int aya;
 	private String  CustomerName;
 	private String CustomerPhoneNumber;
 	private String CustomerAddress;

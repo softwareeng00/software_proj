@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 
 
 public class register {
-	
+	int aya;
 	boolean flaguserreg=false;
 	boolean flagusernotreg=false;
 	Customer user;

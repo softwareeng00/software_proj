@@ -7,6 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class BillCus {
+	int aya;
 	public static boolean flagbill=false;
 	
 	public static boolean flagtrack=false;

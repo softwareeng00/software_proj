@@ -8,7 +8,7 @@ import io.cucumber.java.en.Then;
 public class order {
 
 	
-
+	int aya;
 		public static boolean flag1=false;
 		public static boolean flag2=false;
 		public static boolean flag3=false;

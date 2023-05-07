@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		int aya;
 		boolean flagintitail=false;
 		int userselected=0;
 		Customer C=new Customer();

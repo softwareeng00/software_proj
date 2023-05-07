@@ -7,6 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Product {
+	int aya;
 	static boolean flagcreateprod=false;
 	static boolean flagproduct=false;
 	static boolean deleteflag= false;
