@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ProductMain {
 	public  String id;
-	int aya;
+	int ay;
 	public String type;
 //	public static boolean create;
 	public static boolean inwait=false;

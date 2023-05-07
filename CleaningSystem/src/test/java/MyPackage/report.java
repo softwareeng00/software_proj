@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class report {
-	int aya;
+	int ay;
 	boolean flagprod=false;
 	boolean flagagent=false;
 	boolean flagcomplete=false;

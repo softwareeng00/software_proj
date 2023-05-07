@@ -5,7 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class availableWorker {
-	int aya;
+	int ay;
 	public static boolean flagworker=false;
 
 	

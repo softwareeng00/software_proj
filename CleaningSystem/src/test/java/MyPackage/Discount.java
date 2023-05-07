@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Discount {
-	int aya;
+	int ay;
 	int num=0;
 	int price;
 	boolean flagdis=false;

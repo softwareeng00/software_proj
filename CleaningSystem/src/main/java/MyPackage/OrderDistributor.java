@@ -5,7 +5,7 @@ import java.util.List;
 public class OrderDistributor {
     private List<Worker> workers;
     
-    int aya;
+    int ay;
     public OrderDistributor(List<Worker> workerss) {
         this.workers = workerss;
     }

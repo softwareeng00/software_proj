@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CusTest {
-	int aya;
+	int ay;
 	public static boolean CustomerFlag=false;
 	public static boolean flagadd=false;
 	public static boolean flagupdate=false;

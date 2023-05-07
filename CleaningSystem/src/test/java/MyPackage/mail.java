@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 
 public class mail {
 	
-	int aya;
+	int ay;
 	public static boolean  flagin=false;
 	Customer a = new Customer();
 	public static boolean  flagmail=false;

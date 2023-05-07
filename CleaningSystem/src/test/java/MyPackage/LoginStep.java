@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 
 
 public class LoginStep {
-	int aya;
+	int ay;
 	Admin A;
 	Worker W;
 	Customer U;
