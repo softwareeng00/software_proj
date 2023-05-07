@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import io.cucumber.java.it.Date;
 
 public class Admin {
-	int ayaa;
+	int ayaaaa;
     public static boolean testing =false;
 	int id;
 	String name;
