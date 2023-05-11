@@ -42,7 +42,8 @@ public void the_user_send_product_to_cleaning_system(String string) {
 public void the_user_pay_the_price_of_product_to(String string) {
      price=Integer.parseInt(string);
      int g=B.discountInNumber(num,price);
-     if(g==(num--)) {
+     
+     if(g==(--num)) {
     	 flagdis=true;
      }
 }
