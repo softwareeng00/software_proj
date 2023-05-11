@@ -2,41 +2,40 @@ package MyPackage;
 
 
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.List;
 
-import io.cucumber.java.it.Date;
 
 
 public class Customer {
 	int ay;
-	private String  CustomerName;
-	private String CustomerPhoneNumber;
-	private String CustomerAddress;
-	private	String CustomerAge;
+	private String  customerN;
+	private String customerPhone;
+	private String customerAddress;
+	private	String customerAge;
 
-	public static ArrayList<Customer> CustomerData =new ArrayList<Customer>();
+	 static List<Customer> customerData =new ArrayList<>();
 
 	
 	
-	public static ArrayList<Customer> user1 =new ArrayList<Customer>() ;
-	public static ArrayList<String> email =new ArrayList<String>() ;
-	public static ArrayList<String> pass =new ArrayList<String>() ;
-	public String id;
-	public String name;
-	public String Address;
-	public static ArrayList<String> phone1 =new ArrayList<String>() ;
+	 static List<Customer> user1 =new ArrayList<>();
+	 static List<String> email =new ArrayList<>();
+	 static List<String> pass =new ArrayList<>();
+	 String id;
+	 String name;
+	 static String addresss;
+	 static List<String> phone1 =new ArrayList<>() ;
 
-public String phone;
-	private String Email;
+    String phone;
+	private String emaill;
 	private String password;
-	public int reguser=0;
+	 int reguser=0;
 	
 	public Customer()
 	{
 		this.id="11";
 		this.name="aya";
-		this.Address="Nablus";
-		this.Email="ayamoinn@gmail.com";
+		this.addresss="Nablus";
+		this.emaill="ayamoinn@gmail.com";
 		this.password="useruser";
 		phone1.add("0687347273");
 		this.phone="0687347273";
@@ -48,10 +47,10 @@ public String phone;
 	}
 	
 	public String getEmail() {
-		return this.Email;
+		return this.emaill;
 	}
 	public void setEmail(String e) {
-		this.Email = e;
+		this.emaill = e;
 		
 		
 	}
@@ -77,7 +76,7 @@ public String phone;
 	public static void printCustomer() {
 		for(int i=0;i<Customer.user1.size();i++)
 		{
-			System.out.println("Customer : "+Customer.user1.get(i).id+" "+Customer.user1.get(i).name+" "+Customer.user1.get(i).Address+" "+
+			System.out.println("Customer : "+Customer.user1.get(i).id+" "+Customer.user1.get(i).name+" "+Customer.user1.get(i).addresss+" "+
 					Customer.user1.get(i).phone);
 		}
 		
@@ -107,35 +106,35 @@ public String phone;
 	}
 	
 	public String getCustomerName() {
-		return CustomerName;
+		return customerN;
 	}
 
 	public void setCustomerName(String customerName) {
-		CustomerName = customerName;
+		customerN = customerName;
 	}
 
 	public String getCustomerPhoneNumber() {
-		return CustomerPhoneNumber;
+		return customerPhone;
 	}
 
 	public void setCustomerPhoneNumber(String customerPhoneNumber) {
-		CustomerPhoneNumber = customerPhoneNumber;
+		customerPhone = customerPhoneNumber;
 	}
 
 	public String getCustomerAddress() {
-		return CustomerAddress;
+		return customerAddress;
 	}
 
 	public void setCustomerAddress(String customerAddress) {
-		CustomerAddress = customerAddress;
+		customerAddress = customerAddress;
 	}
 
 	public String getCustomerAge() {
-		return CustomerAge;
+		return customerAge;
 	}
 
 	public void setCustomerAge(String customerAge) {
-		CustomerAge = customerAge;
+		customerAge = customerAge;
 	}
 	
 	
@@ -146,8 +145,8 @@ public String phone;
 		this.setCustomerAddress(adderess);
 		this.setCustomerPhoneNumber(ph);
 		
-		if(!CustomerData.contains(this))
-			CustomerData.add(this);
+		if(!customerData.contains(this))
+			customerData.add(this);
 	}
 	public void updatCustomer(String name1,String age1,String adderess1,String ph1)
 	{
@@ -158,21 +157,21 @@ public String phone;
 		
 		
 		
-		for(int i=0;i<CustomerData.size();i++)
+		for(int i=0;i<customerData.size();i++)
 		{
 			
-		if(CustomerData.get(i).getCustomerPhoneNumber().equals(ph1))
-			CustomerData.set(i, this);
+		if(customerData.get(i).getCustomerPhoneNumber().equals(ph1))
+			customerData.set(i, this);
 		}
 	
 	}
 	public void deleteCustomer(String ph1)
 	{
 		
-		for(int i=0;i<CustomerData.size();i++)
+		for(int i=0;i<customerData.size();i++)
 		{
-			if(CustomerData.get(i).getCustomerPhoneNumber().equals(ph1))
-				CustomerData.remove(i);
+			if(customerData.get(i).getCustomerPhoneNumber().equals(ph1))
+				customerData.remove(i);
 			
 		}
 		}
