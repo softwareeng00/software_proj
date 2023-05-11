@@ -97,7 +97,7 @@ public class ProductMain {
 				
 			
 			
-		} catch (InterruptedException e) {
+		} catch (Exception e) {
 		
 			e.printStackTrace();
 		}
@@ -123,7 +123,7 @@ public class ProductMain {
 				
 			
 			
-		} catch (InterruptedException e) {
+		} catch (Exception e) {
 			
 			e.printStackTrace();
 		}
@@ -149,7 +149,7 @@ public class ProductMain {
 					
 				
 				
-			} catch (InterruptedException e) {
+			} catch (Exception e) {
 				
 				e.printStackTrace();
 			}
@@ -167,9 +167,10 @@ public class ProductMain {
 					
 						try {
 							if(Customer.user1.get(i).Address.equals("Nablus")){
-							TimeUnit.MINUTES.sleep(15);}
+							TimeUnit.MINUTES.sleep(1);
+								}
 							
-						} catch (InterruptedException e) {
+						} catch (Exception e) {
 							
 							e.printStackTrace();
 						}

@@ -99,7 +99,7 @@ public String phone;
 	{
 		for(int i=0;i<phone1.size();i++)
 		{
-			if(num.equals(phone1.get(i)));
+			if(num.equals(phone1.get(i)))
 			return 1;
 		}
 	return 0;

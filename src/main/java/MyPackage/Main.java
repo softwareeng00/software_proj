@@ -302,7 +302,7 @@ public class Main {
 				System.out.println("");
 				break;
 			case 5:
-				if(ProductMain.productInWaiting() || ProductMain.productInCleaning() || ProductMain.productInCleaning())
+				if(ProductMain.productInWaiting() || ProductMain.productInCleaning() || ProductMain.productCompleted())
 					 System.out.println("Product finished wait state and go to cleaning state");
 					else
 						System.out.println("State Product in Cleaning ");
