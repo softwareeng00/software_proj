@@ -32,6 +32,10 @@ public class Worker {
 	if(!WorkerList.contains(this));
 	WorkerList.add(this);
 	}
+	private void setBirthdate(Date date) {
+	
+		
+	}
 	public static String workerProduct()
 	{
 	
@@ -48,9 +52,7 @@ public class Worker {
 	public Worker() {
 		
 	}
-	public String getEmail() {
-		return Email;
-	}
+
 	public void setEmail(String email) {
 		Email = email;
 		if (!emailworker.contains(email))
@@ -67,7 +69,7 @@ public class Worker {
 	
 	
 	public int checkpass(String string2) {
-		// TODO Auto-generated method stub
+	
 		if(string2.equals("jad3333") || string2.equals("ayaaya1") || 
 				string2.equals("mohmd36")) {
 			return 1;
@@ -124,9 +126,7 @@ public class Worker {
 		this.name = name;
 	}
 
-	public String getAddress() {
-		return Address;
-	}
+	
 
 	public void setAddress(String address) {
 		Address = address;
@@ -140,17 +140,10 @@ public class Worker {
 		this.phone = phone;
 	}
 
-	public Date getBirthdate() {
-		return birthdate;
-	}
+	
 
-	public void setBirthdate(Date birthdate) {
-		this.birthdate = birthdate;
-	}
-	public void addOrder(ProductMain order) {
-		
-		
-	}
+	
+
 	
 	
 	

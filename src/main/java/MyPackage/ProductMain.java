@@ -192,14 +192,11 @@ public class ProductMain {
 		
 	}
 	public static int numberprodag(int n) {
-		int k=500;
-	
-		int j= (int) (500 - 2*Math.random());
 		
-		return j;
+	return (int) (500 - 2*Math.random());
 	}
 	public static int numberprodeq() {
-		int k=120;
+	
 	
 		int j=(int) (120 - 2*Math.random());
 		
@@ -217,11 +214,7 @@ public class ProductMain {
 		return j;
 	}
 	
-	public String getID() {
-		
-		
-		return id;
-	}
+	
 	
 	
 }

@@ -8,6 +8,7 @@ public class OrderDistributor {
     int ay;
     public OrderDistributor(List<Worker> workerss) {
         this.workers = workerss;
+        
     }
 
     public void distributeOrders(List<ProductMain> orders) {
@@ -18,7 +19,8 @@ public class OrderDistributor {
         int currentWorkerIndex = 0;
         int ordersAssigned = 0;
         for (ProductMain order : orders) {
-            workers.get(currentWorkerIndex).addOrder(order);
+        	
+         //   workers.get(currentWorkerIndex).addOrder(order);
             ordersAssigned++;
             if (ordersAssigned % avg == 0) {
                 currentWorkerIndex++;

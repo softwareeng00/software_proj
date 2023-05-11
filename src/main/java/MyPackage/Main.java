@@ -48,7 +48,7 @@ public class Main {
 			do
 			{
 				if(flagadmin) {
-				userselected1 =AdminMenu();
+				userselected1 =adminMenue();
 				switch(userselected1)
 				{
 				case 1 : 
@@ -121,7 +121,11 @@ public class Main {
 			}
 			while(userselected1<7);
 			{
-                userselected = extracted(userselected, flagadmin);
+				if(flagadmin) {
+					System.out.printf(" Exit\n");
+					userselected =firstMenu();
+					}
+					
 
 				
 
@@ -136,10 +140,10 @@ public class Main {
 			int userselected2 = 0;
 			
 			System.out.print("USERNAME : ");
-			String W1=scc.next();
+			String w1=scc.next();
 			System.out.print("PASSWORD : ");
-			String W2=scc.next();
-			if(w.checkemail(W1)==1 && w.checkpass(W2)==1)
+			String w2=scc.next();
+			if(w.checkemail(w1)==1 && w.checkpass(w2)==1)
 			{
 				flagworker=true;
 			}
@@ -148,7 +152,7 @@ public class Main {
 			do
 			{
 				 if(flagworker) {
-				userselected2 =Workermenu();
+				userselected2 =workerMenu();
 				switch(userselected2)
 				{
 				
@@ -200,22 +204,23 @@ public class Main {
             
 
 		do
-		{String C1 = null;String C2; 
+		{String cc1 = null;
+		String cc2; 
 			if(x==1) {
 				if(!flagaccount) {
 			System.out.print("USERNAME : ");
-			 C1=scc.next();emails=C1;
+			 cc1=scc.next();emails=cc1;
 			System.out.print("PASSWORD : ");
-			 C2=scc.next();
+			 cc2=scc.next();
 			flagaccount=true;
 			
-			if(cc.checkemail(C1)==1 && cc.checkpass(C2)==1)
+			if(cc.checkemail(cc1)==1 && cc.checkpass(cc2)==1)
 			{
 				flaguser=true;
 			}
 				}else {
 			 if(flaguser) {
-			userselected3 =CustomerMenu();
+			userselected3 =customerMenu();
 			switch(userselected3)
 			{
 			case 1 : 
@@ -224,17 +229,17 @@ public class Main {
 				
 				
 				
-				ProductMain M=new ProductMain();
+				ProductMain mm1=new ProductMain();
 				Integer g= ProductMain.prod.size()+1;
-				M=scan();
-				nameofprod=M.name;
-				height=Integer.parseInt(M.high);
-				width=Integer.parseInt(M.width);
+				mm1=scan();
+				nameofprod=mm1.name;
+				height=Integer.parseInt(mm1.high);
+				width=Integer.parseInt(mm1.width);
 				
 				if(x2==0) {
 					
 				}
-				M.createProduct(g.toString(), M.type, nameofprod, M.image, M.description, M.specialtreatment,M.high,M.width);
+				mm1.createProduct(g.toString(), mm1.type, nameofprod, mm1.image, mm1.description, mm1.specialtreatment,mm1.high,mm1.width);
 				System.out.println("Your product added to the system\n");
 				countprod++;countprod1++;
 				flagintitail=true;
@@ -253,13 +258,13 @@ public class Main {
 				Integer in=f1(r);
 				
 				System.out.println("Please update Information of your product");
-				ProductMain M1=new ProductMain();
-				M1=scan();
-				height=Integer.parseInt(M1.high);
-				width=Integer.parseInt(M1.width);
-				nameofprod=M1.name;
+				ProductMain mmm=new ProductMain();
+				mmm=scan();
+				height=Integer.parseInt(mmm.high);
+				width=Integer.parseInt(mmm.width);
+				nameofprod=mmm.name;
 				
-				M1.updateProduct(in.toString(), M1.type, M1.name, M1.image, M1.description, M1.specialtreatment,M1.high,M1.width);
+				mmm.updateProduct(in.toString(), mmm.type, mmm.name, mmm.image, mmm.description, mmm.specialtreatment,mmm.high,mmm.width);
 				System.out.println("Your product updating in the system");
 				
 			
@@ -288,11 +293,11 @@ public class Main {
 						Customer.user1.get(i);
 						System.out.println("*		addresss " + Customer.addresss+	"		  *");
 						System.out.println("*		Product " + nameofprod+	"	          *");
-						Bill B=new Bill();
-						int BILL=B.priceProd(height,width,countprod);pr1=BILL;
-						System.out.println("*		Price " +BILL+"$"+	"		  *");
+						Bill b=new Bill();
+						int billCus=b.priceProd(height,width,countprod);pr1=billCus;
+						System.out.println("*		Price " +billCus+"$"+	"		  *");
 						System.out.println("*		Delivary 20$" +		"		  *");
-						System.out.println("*		Total Price " +B.totalPriceofproduct(height,width,countprod)+"$"+"	  *");
+						System.out.println("*		Total Price " +b.totalPriceofproduct(height,width,countprod)+"$"+"	  *");
 						System.out.println("* * * * * * * * * * * * * * * * * * * * * *");
 					}
 				}
@@ -371,13 +376,7 @@ public class Main {
 		}
 
 
-	private static int extracted(int userselected, boolean flagadmin) {
-		if(flagadmin) {
-		System.out.printf(" Exit\n");
-		userselected =firstMenu();
-		}
-		return userselected;
-	}
+	
 	
 
 	public static int firstMenu()
@@ -405,7 +404,7 @@ public class Main {
 	}
 
 
-	public static int AdminMenu()
+	public static int adminMenue()
 	{
 		int selection ;
 		 Scanner sc = new Scanner(System.in);
@@ -427,7 +426,7 @@ public class Main {
 		
 		
 	}
-	public static int CustomerMenu()
+	public static int customerMenu()
 	{
 		int selection;
 		 Scanner sc = new Scanner(System.in);
@@ -455,7 +454,7 @@ public class Main {
 
 
 
-	public static int Workermenu()
+	public static int workerMenu()
 	{
 		int selection ;
 		 Scanner sc = new Scanner(System.in);
@@ -507,28 +506,28 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		 System.out.print("Enter name of product ");
 		 
-		 ProductMain T = new ProductMain() ;
-	     T.name = scan.next();
+		 ProductMain tt = new ProductMain() ;
+	     tt.name = scan.next();
 	     
 	     
 	System.out.print("Enter type of his product ");
 
-		T.type = scan.next();
+		tt.type = scan.next();
 		
 		System.out.print("The size of product highet and width : ");
 		
-		T.high=scan.next();
-		T.width=scan.next();
+		tt.high=scan.next();
+		tt.width=scan.next();
 		
 		System.out.print("Enter description ");
-		T.description=scan.next();
+		tt.description=scan.next();
 		System.out.print("Enter image of product ");
-		T.image=scan.next();
+		tt.image=scan.next();
 		System.out.print("If you need a special treatment ");
-		T.specialtreatment=scan.next();
+		tt.specialtreatment=scan.next();
 		
 		
-		return T;
+		return tt;
 	}
 
 	public static int  f1(String hh) {
@@ -544,23 +543,23 @@ public class Main {
 		return index;
 	}
 	public static String createaccountcus() {
-		Customer F=new Customer();
+		Customer ff=new Customer();
 		Scanner n=new Scanner(System.in);
 		System.out.println("Welcome\nYou now in create account page\nEnter your information");
-		System.out.print("SSN : ");F.id=n.next();
-		System.out.print("Name : ");F.name=n.next();
-		System.out.print("Adderess : ");F.addresss=n.next();
-		System.out.print("Phone : ");F.phone=n.next();
-		System.out.print("Email : ");F.setEmail(n.next());
-		System.out.print("Password : ");F.setPassword(n.next());
-		System.out.print("Confirm password : ");String cpass=n.next();
-		if (!Customer.pass.contains(F.getPassword()))
-			Customer.pass.add(F.getPassword());
-			if (!Customer.email.contains(F.getEmail()))
-				Customer.email.add(F.getEmail());
-			if (!Customer.user1.contains(F))
-				Customer.user1.add(F);
-			return F.getEmail();
+		System.out.print("SSN : ");ff.id=n.next();
+		System.out.print("Name : ");ff.name=n.next();
+		System.out.print("Adderess : ");ff.addresss=n.next();
+		System.out.print("Phone : ");ff.phone=n.next();
+		System.out.print("Email : ");ff.setEmail(n.next());
+		System.out.print("Password : ");ff.setPassword(n.next());
+		System.out.print("Confirm password : ");
+		if (!Customer.pass.contains(ff.getPassword()))
+			Customer.pass.add(ff.getPassword());
+			if (!Customer.email.contains(ff.getEmail()))
+				Customer.email.add(ff.getEmail());
+			if (!Customer.user1.contains(ff))
+				Customer.user1.add(ff);
+			return ff.getEmail();
 		
 	}
 	}
