@@ -93,7 +93,7 @@ public class ProductMain {
 	
 		  try {
 			 
-			 semaphore.await(2, TimeUnit.SECONDS);
+			 if(semaphore.await(2, TimeUnit.SECONDS))
 			 inwait=true;
 				
 			
@@ -120,7 +120,7 @@ public class ProductMain {
 
 		  
 		  try {
-			 semaphore.await(2, TimeUnit.SECONDS);
+			 if(semaphore.await(2, TimeUnit.SECONDS))
 			 incleaning =true;
 				
 			
@@ -147,7 +147,7 @@ public class ProductMain {
 
 			  
 			  try {
-				 semaphore.await(2, TimeUnit.SECONDS);
+				if( semaphore.await(2, TimeUnit.SECONDS))
 				 completed =true;
 					
 				
