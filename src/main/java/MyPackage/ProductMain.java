@@ -170,7 +170,7 @@ public class ProductMain {
 							TimeUnit.MINUTES.sleep(1);
 								}
 							
-						} catch (Exception e) {
+						} catch (InterruptedException e) {
 							
 							e.printStackTrace();
 						}
