@@ -8,10 +8,10 @@ public class Worker {
 	int ay;
 	int id;
 	private String name;
-	private String Address;
+	
 	private int phone;
 	private Date birthdate;
-	private String Email;
+	private String emmaill;
 	private String password;
 	static int is_worker=0;
 	
@@ -54,7 +54,7 @@ public class Worker {
 	}
 
 	public void setEmail(String email) {
-		Email = email;
+		emmaill = email;
 		if (!emailworker.contains(email))
 			 emailworker.add(email);
 	}
@@ -90,7 +90,7 @@ public class Worker {
 	}
 	
 	public static void printWorker() {
-		System.out.println("Name         " +"Email    \n"+
+		System.out.println("Name         " +"emmaill    \n"+
 				           "Aya Moin     " +"ayamoinn44@gmail.com\n"+
 				           "Mohmed samer " +"mohmd55t44@gmail.com\n"+
 				           "jad mohmd    " +"jadmohmd33@gmail.com\n");
@@ -117,6 +117,7 @@ public class Worker {
 
 		System.out.println("\n Your break at 11:00 to 11:30 / break at 2:00 to 2:40");
 	}
+	
 
 	public String getName() {
 		return name;
@@ -129,7 +130,8 @@ public class Worker {
 	
 
 	public void setAddress(String address) {
-		Address = address;
+	
+		String adddr = address;
 	}
 
 	public int getPhone() {
