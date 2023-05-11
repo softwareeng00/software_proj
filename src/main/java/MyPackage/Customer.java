@@ -125,16 +125,16 @@ public class Customer {
 		return customerAddress;
 	}
 
-	public void setCustomerAddress(String customerAddress) {
-		customerAddress = customerAddress;
+	public void setCustomerAddress(String s) {
+		customerAddress = s;
 	}
 
 	public String getCustomerAge() {
 		return customerAge;
 	}
 
-	public void setCustomerAge(String customerAge) {
-		customerAge = customerAge;
+	public void setCustomerAge(String s) {
+		customerAge = s;
 	}
 	
 	
