@@ -1,24 +1,26 @@
 package MyPackage;
 
-import java.util.List;
+
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		int ay;
+		
 		boolean flagintitail=false;
 		int userselected=0;
-		Customer C=new Customer();
-		Admin A=new Admin();
+		Customer cc=new Customer();
+		Admin aa=new Admin();
 		int pr1=0;
 		
-		Worker W=new Worker();
+		Worker w=new Worker();
 		Scanner scc = new Scanner(System.in);
 		boolean flagadmin=false;
 		String nameofprod=null;
-		int height=1;int width=1;
-		int countprod=0;int countprod1=0;
+		int height=1;
+		int width=1;
+		int countprod=0;
+		int countprod1=0;
 		boolean flagworker=false;
 		boolean flaguser=false;
 		boolean flagaccount=false;
@@ -33,10 +35,10 @@ public class Main {
 		{
 			int userselected1 = 0;
 			System.out.print("USERNAME : ");
-			String A1=scc.next();
+			String a1=scc.next();
 			System.out.print("PASSWORD : ");
-			String A2=scc.next();
-			if(A.checkemail(A1)==1 && A.checkpass(A2)==1)
+			String a2=scc.next();
+			if(aa.checkemail(a1)==1 && aa.checkpass(a2)==1)
 			{
 				flagadmin=true;
 				
@@ -55,7 +57,7 @@ public class Main {
 					
 				break;
 				case 2 :
-					ProductMain o=new ProductMain();
+					
 					ProductMain.printProduct();
 				
 					break;
@@ -66,17 +68,17 @@ public class Main {
 					break;
                 case 4:
 					System.out.print("Enter SSN of User you need to delete : ");
-					String CUS=scc.next();
+					String cuss=scc.next();
 					Customer r=new Customer();
-					r.deleteCustomer(CUS);
+					r.deleteCustomer(cuss);
 				
 					break;
                 case 5:
 	
                 	System.out.print("Enter id of Product you need to delete : ");
-					String PRO=scc.next();
+					String proo=scc.next();
 					ProductMain pr=new ProductMain();
-					pr.deleteProduct(PRO);
+					pr.deleteProduct(proo);
                 	break;
                 case 6:
                 	if(countprod1==0)
@@ -119,10 +121,7 @@ public class Main {
 			}
 			while(userselected1<7);
 			{
-                if(flagadmin) {
-				System.out.printf(" Exit\n");
-				userselected =firstMenu();
-                }
+                userselected = extracted(userselected, flagadmin);
 
 				
 
@@ -140,7 +139,7 @@ public class Main {
 			String W1=scc.next();
 			System.out.print("PASSWORD : ");
 			String W2=scc.next();
-			if(W.checkemail(W1)==1 && W.checkpass(W2)==1)
+			if(w.checkemail(W1)==1 && w.checkpass(W2)==1)
 			{
 				flagworker=true;
 			}
@@ -210,7 +209,7 @@ public class Main {
 			 C2=scc.next();
 			flagaccount=true;
 			
-			if(C.checkemail(C1)==1 && C.checkpass(C2)==1)
+			if(cc.checkemail(C1)==1 && cc.checkpass(C2)==1)
 			{
 				flaguser=true;
 			}
@@ -271,6 +270,7 @@ public class Main {
 				 
 				String hh= scc.next();
 				Integer i1=f1(hh);
+				
 				ProductMain o=new ProductMain();
 				o.deleteProduct(i1.toString());
 				
@@ -369,6 +369,15 @@ public class Main {
 		 
 
 		}
+
+
+	private static int extracted(int userselected, boolean flagadmin) {
+		if(flagadmin) {
+		System.out.printf(" Exit\n");
+		userselected =firstMenu();
+		}
+		return userselected;
+	}
 	
 
 	public static int firstMenu()
