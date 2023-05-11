@@ -1,6 +1,7 @@
 package MyPackage;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import io.cucumber.java.it.Date;
 
@@ -10,27 +11,25 @@ public class Worker {
 	private String name;
 	
 	private int phone;
-	private Date birthdate;
-	private String emmaill;
 	private String password;
-	static int is_worker=0;
+	static int isWorker=0;
 	
-	public static ArrayList<Worker> WorkerList =new ArrayList<Worker>();
+	 static List<Worker> workerList =new ArrayList<>();
 	
-	public static ArrayList<String> emailworker =new ArrayList<String>() ;
-	public static ArrayList<String> passworker =new ArrayList<String>() ;
+	 static List<String> emailWorker =new ArrayList<>() ;
+	 static List<String> passWorker =new ArrayList<>() ;
 	
 	
 	public void creatWorker(String name,String address,int phone,Date date,String email,String password )
 	{
 	this.setName(name);
-	this.setAddress(address);
+	this.setAddrr(address);
 	this.setPhone(phone);
 	this.setBirthdate(date);
 	this.setEmail(email);
 	this.setPassword(password);
-	if(!WorkerList.contains(this));
-	WorkerList.add(this);
+	if(!workerList.contains(this))
+	workerList.add(this);
 	}
 	private void setBirthdate(Date date) {
 	
@@ -39,12 +38,12 @@ public class Worker {
 	public static String workerProduct()
 	{
 	
-		ProductMain P=new ProductMain();
-		Worker W=new Worker();
-		String saver=P.id;
-		String saver2=W.getName();
-		String WPdata=saver+saver2;	
-		return WPdata;
+		ProductMain pp=new ProductMain();
+		Worker ws=new Worker();
+		String saver=pp.id;
+		String saver2=ws.getName();
+		
+		return saver+saver2;
 	}
 	
 	
@@ -54,17 +53,17 @@ public class Worker {
 	}
 
 	public void setEmail(String email) {
-		emmaill = email;
-		if (!emailworker.contains(email))
-			 emailworker.add(email);
+	
+		if (!emailWorker.contains(email))
+			 emailWorker.add(email);
 	}
 	public String getPassword() {
 		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
-		if (!passworker.contains(password))
-			passworker.add(password);
+		if (!passWorker.contains(password))
+			passWorker.add(password);
 	}
 	
 	
@@ -96,7 +95,7 @@ public class Worker {
 				           "jad mohmd    " +"jadmohmd33@gmail.com\n");
 	}
 	
-	public static void Workername()
+	public static void workerName()
 	{
 		System.out.println("Name" +
 		           "Aya Moin\n"+
@@ -129,9 +128,12 @@ public class Worker {
 
 	
 
-	public void setAddress(String address) {
+	public void setAddrr(String address) {
+		
+	}
+public String getAddrr(String address) {
 	
-		String adddr = address;
+		return address;
 	}
 
 	public int getPhone() {
