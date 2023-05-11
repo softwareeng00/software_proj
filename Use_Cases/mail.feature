@@ -13,9 +13,9 @@ Feature: Notify The Customer
     Then send message to the email "email" in this step
     
   Scenario:  if customer has not add an valid email 
-    Given sending message to the  "phone" number in step
+    Given sending message to the  "0687347273" number in step
     When the customer doesnt get the calling message in email "email" in step
-    Then send message to the number "phone" in this step
+    Then send message to the number "0687347273" in this step
     
     
   Scenario: sending message 
