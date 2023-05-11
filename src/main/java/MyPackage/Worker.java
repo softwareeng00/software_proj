@@ -43,15 +43,7 @@ public class Worker {
 		return WPdata;
 	}
 	
-	public static boolean workerproduct()
-	{
-		if(workerProduct()!=null)
-			
-		return true;
-		
-		else
-			return false;
-	}
+	
 	
 	public Worker() {
 		
