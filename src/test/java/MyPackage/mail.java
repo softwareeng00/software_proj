@@ -88,7 +88,7 @@ public class mail {
 
 	@Then("send message to the number {string} in this step")
 	public void send_message_to_the_number_in_this_step(String string) {
-	    assertTrue(!flagin);
+	    assertTrue(flagin);
 		
 	}
 
