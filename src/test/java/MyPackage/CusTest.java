@@ -107,9 +107,9 @@ else
 	public void update_the_customer_with_customer_phone_number(String string) {
 		
 	    
-		for(int i=0;i<Customer.CustomerData.size();i++)
+		for(int i=0;i<Customer.customerData.size();i++)
 		{
-		if(Customer.CustomerData.get(i).getCustomerPhoneNumber()==string)
+		if(Customer.customerData.get(i).getCustomerPhoneNumber()==string)
 		{
 			flagupdate=true;
 		}

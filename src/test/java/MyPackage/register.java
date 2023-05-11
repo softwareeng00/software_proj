@@ -28,7 +28,7 @@ public class register {
 				user.id=id;
 				user.name=name;
 				user.setEmail(email);
-				user.Address=address;
+				user.addresss=address;
 				user.setPassword(pass);
 				user.phone=phone;
 				flagusernotreg=true;
