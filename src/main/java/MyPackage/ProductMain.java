@@ -97,9 +97,10 @@ public class ProductMain {
 				
 			
 			
-		} catch (Exception e) {
+		} catch (InterruptedException e) {
 		
 			e.printStackTrace();
+			 Thread.currentThread().interrupt();
 		}
 
 		  
@@ -123,9 +124,10 @@ public class ProductMain {
 				
 			
 			
-		} catch (Exception e) {
+		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			 Thread.currentThread().interrupt();
 		}
 
 		  
@@ -149,9 +151,10 @@ public class ProductMain {
 					
 				
 				
-			} catch (Exception e) {
+			} catch (InterruptedException e) {
 				
 				e.printStackTrace();
+			       Thread.currentThread().interrupt();
 			}
 
 			
@@ -216,7 +219,7 @@ public class ProductMain {
 	
 	public String getID() {
 		
-		// TODO Auto-generated method stub
+		
 		return id;
 	}
 	
