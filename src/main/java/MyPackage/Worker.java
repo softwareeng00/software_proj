@@ -45,12 +45,12 @@ public class Worker {
 	
 	public static boolean workerproduct()
 	{
-		if(workerProduct()==null)
+		if(workerProduct()!=null)
 			
-		return false;
+		return true;
 		
 		else
-			return true;
+			return false;
 	}
 	
 	public Worker() {
