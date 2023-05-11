@@ -29,6 +29,7 @@ public class Bill {
 			x--;
 		}
 		
+		
 		return x;
 		
 	}
