@@ -2,10 +2,10 @@ package MyPackage;
 
 public class Bill {
 	int ay;
-	public int price;
-	public int totalprice;
-	public int countofprodforcustomer;
-	public int pricefordelivery;
+	 int price;
+	 int totalprice;
+	 int countofprodforcustomer;
+	 int pricefordelivery;
 	
 	public Bill() {
 		price=300;
@@ -13,10 +13,10 @@ public class Bill {
 		pricefordelivery=20;
 	}
 	public int priceProd(int h,int w,int count) {
-		 int price=50*h*count;
+		 
 		
 		
-		return price;
+		return 50*h*count;
 	}
 	public int totalPriceofproduct(int h,int w,int count) {
 		 
@@ -26,7 +26,7 @@ public class Bill {
 	public int discountInNumber(int x,int price) {
 		
 		if(x>=6) {
-			int z=x-1;
+			x=x-1;
 		}
 		
 		return x;
@@ -41,7 +41,7 @@ public class Bill {
 		return s;
 	}
 	public static void main(String[] args) {
-		Bill h=new Bill();
+		
 		for(int i=0;i<10;i++) {
 			
 		}
