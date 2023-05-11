@@ -22,7 +22,6 @@ public class Discount {
 	
 @Given("User login with email {string}")
 public void user_login_with_email(String string) {
-	    // Write code here that turns the phrase above into concrete actions
 	if(u.checkemail(string)==1 )
 	{
 		LoginStep.flag=true;
@@ -34,7 +33,6 @@ public void user_login_with_email(String string) {
 
 @Given("the user send {string} product to cleaning system")
 public void the_user_send_product_to_cleaning_system(String string) {
-    // Write code here that turns the phrase above into concrete actions
 	 if(LoginStep.flag)
      num=Integer.parseInt(string);
     
@@ -42,7 +40,6 @@ public void the_user_send_product_to_cleaning_system(String string) {
 
 @Then("the user pay the price of product to {string}")
 public void the_user_pay_the_price_of_product_to(String string) {
-    // Write code here that turns the phrase above into concrete actions
      price=Integer.parseInt(string);
      int g=B.discountInNumber(num,price);
      if(g==(num--)) {
@@ -52,13 +49,11 @@ public void the_user_pay_the_price_of_product_to(String string) {
 
 @Then("the last one is free")
 public void the_last_one_is_free() {
-    // Write code here that turns the phrase above into concrete actions
     assertTrue(flagdis);
 }
 
 @Given("the price of the user {string}")
 public void the_price_of_the_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
     int myprice=Integer.parseInt(string);
     int t=B.discountInPrice10(myprice,10);
     if(t==450) {
@@ -68,26 +63,22 @@ public void the_price_of_the_user(String string) {
 
 @Then("the user pay the price of product after discount {int}% {string}")
 public void the_user_pay_the_price_of_product_after_discount(Integer int1, String string) {
-    // Write code here that turns the phrase above into concrete actions
     assertTrue(flagdis10);
 }
 
 @Given("the user is not login")
 public void the_user_is_not_login() {
-    // Write code here that turns the phrase above into concrete actions
 	LoginStep.flag=false;
 }
 
 @When("the user login with email {string}")
 public void the_user_login_with_email(String string) {
-    // Write code here that turns the phrase above into concrete actions
 	u.setEmail(string);
 	LoginStep.flag=true;
 }
 
 @When("the price of the new user {string}")
 public void the_price_of_the_new_user(String string) {
-    // Write code here that turns the phrase above into concrete actions
    
     int myprice=Integer.parseInt(string);
     int t=B.discountInPrice10(myprice,5);
@@ -98,7 +89,6 @@ public void the_price_of_the_new_user(String string) {
 }
 @Then("user pay the price of product after discount {int}% {string}")
 public void user_pay_the_price_of_product_after_discount(Integer int1, String string) {
-    // Write code here that turns the phrase above into concrete actions
     assertTrue(flagdis5);
 }
 }
