@@ -1,24 +1,24 @@
 package MyPackage;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-import java.util.Scanner;
 
 public class ProductMain {
-	public  String id;
-	int ay;
-	public String type;
-	public static boolean inwait=false;
-	public static boolean incleaning=false;
-	public static boolean completed=false;
-	public String name;
-	public String image;
-	public String description;
-	public String high;
-	public String width;
-	public String specialtreatment;
-	public static ArrayList<ProductMain> prod =new ArrayList<ProductMain>() ;
+	  String id;
+	
+	 String type;
+	 static boolean inwait=false;
+	 static boolean incleaning=false;
+	 static boolean completed=false;
+	 String name;
+	 String image;
+	 String description;
+	 String high;
+	 String width;
+	 String specialtreatment;
+	 static List<ProductMain> prod =new ArrayList<>() ;
   
  public ProductMain() {
 	         this.id="1";
@@ -85,14 +85,15 @@ public class ProductMain {
 	}
 	public static boolean productInWaiting() {
 		  
-		  boolean timeout=false;
+		
+		  
 		 CountDownLatch semaphore = new CountDownLatch(1);
 	
 
 	
 		  try {
-			  
-			 timeout = !semaphore.await(2, TimeUnit.SECONDS);
+			 
+			 semaphore.await(2, TimeUnit.SECONDS);
 			 inwait=true;
 				
 			
@@ -112,14 +113,14 @@ public class ProductMain {
 	}
 	public static boolean productInCleaning() {
 			
-		 boolean timeout=false;
+		 
 		 if(inwait ) {
 		 CountDownLatch semaphore = new CountDownLatch(1);
 	
 
 		  
 		  try {
-			 timeout = !semaphore.await(2, TimeUnit.SECONDS);
+			 semaphore.await(2, TimeUnit.SECONDS);
 			 incleaning =true;
 				
 			
@@ -139,14 +140,14 @@ public class ProductMain {
 	
 
 		public static boolean productCompleted() {
-			boolean timeout=false;
+			
 			 if(inwait && incleaning) {
 			 CountDownLatch semaphore = new CountDownLatch(1);
 		
 
 			  
 			  try {
-				 timeout = !semaphore.await(2, TimeUnit.SECONDS);
+				 semaphore.await(2, TimeUnit.SECONDS);
 				 completed =true;
 					
 				
@@ -189,18 +190,21 @@ public class ProductMain {
 		else
 			flagagent=false;
 		return flagagent;
+	
+		
 		
 	}
 	public static int numberprodag(int n) {
 		
 	return (int) (500 - 2*Math.random());
+	
 	}
 	public static int numberprodeq() {
 	
 	
-		int j=(int) (120 - 2*Math.random());
 		
-		return j;
+		
+		return (int) (120 - 2*Math.random());
 	}
 	public static int proderror() {
 		int exact=100;
@@ -208,10 +212,10 @@ public class ProductMain {
 		if(approx >=40) {
 			approx-=40;
 		}
-	    int j=(int) (exact-approx);
+	
 		 
 		
-		return j;
+		return (exact-approx);
 	}
 	
 	
