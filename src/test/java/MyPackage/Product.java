@@ -31,52 +31,61 @@ public class Product {
     		LoginStep.flag=true;
     		
     	}
-    	else
-    		LoginStep.flag=false;
+    	
     	
 	    
 	}
-
-    @Given("User enter information of product id {string},type {string},name {string},image {string},description {string},special treatment {string}, high {string},width {string}")
-    public void user_enter_information_of_product_id_type_name_image_description_special_treatment_high_width(String id1, String type, String name, String image, String description, String specialtreatment, String high, String width) {
+    @Given("User enter information of product id {string},type {string},name {string},image {string},description {string},special treatment {string}, high {string},width {string} ,flagprod {string}")
+    public void user_enter_information_of_product_id_type_name_image_description_special_treatment_high_width_flagprod(String id1, String type, String name, String image, String description, String specialtreatment, String high, String width, String string9) {
+     
+    	  
         
-        
-    
-    
-		if(LoginStep.flag==true) {
-		for(ProductMain c :ProductMain.prod) {
-			if(c.id.equals(id1)) {
-	    		flagproduct=true;
-	    		
-	    		
-	    		String msg ="This user is already registered";
-	    	}
-	 }
-	  if(flagproduct==false) {
-	    	product.id=id1;
-	    	product.type=type;
-	    	product.name=name;
-	    	product.image=image;
-	    	product.description=description;
-	    	product.specialtreatment=specialtreatment;
-	    	product.high=high;
-	    	product.width=width;
-	    	
-	    	
-	    	
-	  }
-		}
-	   
-	}
+    		if(LoginStep.flag==true) {
+    		for(ProductMain c :ProductMain.prod) {
+    			if(c.id.equals(id1)) {
+    	    		flagproduct=true;
+    	    		
+    	    		
+    	    		String msg ="This user is already registered";
+    	    	}
+    	 }
+    		
+    	  if(flagproduct==string9.equals("false")) {
+    		  
+    		  
+    		    product.id=id1;
+    	    	product.type=type;
+    	    	product.name=name;
+    	    	product.image=image;
+    	    	product.description=description;
+    	    	product.specialtreatment=specialtreatment;
+    	    	product.high=high;
+    	    	product.width=width;
+    	    	
+    	    	
+    	    	
+    	  }
+    		}
+    }
 
-	@When("Creating product succes")
-	public void creating_product_succes() {
-	
-	   if(flagproduct==false) {
+
+
+		
+
+@When("Creating product succes flagproduct {string}")
+public void creating_product_succes_flagproduct(String string) {
+ 
+	 if(flagproduct==string.equals("false")) {
 		   flagcreateprod=true;
 			product.createProduct(product.id,product.type , product.name, product.image, product.description, product.specialtreatment,product.high,product.width);
 			}
-	}
+}
+		
+		
+		
+	
+	  
+	
 
 	@Then("product is created")
 	public void product_is_created() {
@@ -164,10 +173,11 @@ public class Product {
 		}
 	}
 
-	@Given("Update product with  id {string},type {string}, name {string},image {string},description {string}, special treatment {string}, high {string},width {string}")
-	public void update_product_with_id_type_name_image_description_special_treatment_high_width(String id, String type, String name, String im, String des, String sp, String high, String width) {
-	    
-		if(flagupdate==false) {
+
+@Given("Update product with  id {string},type {string}, name {string},image {string},description {string}, special treatment {string}, high {string},width {string} ,flagprodupdate {string}")
+public void update_product_with_id_type_name_image_description_special_treatment_high_width_flagprodupdate(String id, String type, String name, String im, String des, String sp, String high, String width, String string9) {
+   
+		if(flagupdate==string9.equals("true")) {
 			p.id=id;
 	    	p.type=type;
 	    	p.name=name;
@@ -180,17 +190,24 @@ public class Product {
 		}
 	    
 	}
+		
+	
+	    
+	
 
-	@When("Product update success")
-	public void product_update_success() {
-	   
-		if(flagupdate==false) {
+@When("Product update success string {string}")
+public void product_update_success_string(String string) {
+  
+
+		
+		if(flagupdate==string.equals("false")) {
 			flagupdate=true;
 			p.updateProduct(p.id,p.type, p.name, p.image, p.description, p.specialtreatment,p.high,p.width);
 
 		}
+}
 	   
-	}
+	
 
 	@Then("The Product with id {string} update")
 	public void the_product_with_id_update(String string) {
