@@ -71,11 +71,7 @@ public String phone;
 		    return 1;
 		}
 		return 0;
-		/*if(p.equals("useruser")) {
-			return 1;
-		}
-		
-		return 0;*/
+	
 		
 	}
 	public static void printCustomer() {
@@ -96,11 +92,7 @@ public String phone;
 		    return 1;
 		}
 		return 0;
-		/*if(e.equals("ayamoinn@gmail.com")) {
-			return 1;
-		}
 		
-		return 0;*/
 		
 	}
 	public int checkPhone(String num)
@@ -113,34 +105,7 @@ public String phone;
 	return 1;
 		
 	}
-	/*public void deleteCustomer(String id)
-	{
-		//this.id=id;
-		
-		for(int i=0;i<user1.size();i++)
-		{
-			if(user1.get(i).id.equals(id))
-			user1.remove(i);
-			
-		}
-	}*/
-	/*public static void main (String[] args) {
-		email.add("AAA");
-		email.add("BBB");
-		email.add("CCC");
-		
-		/* Scanner scan = new Scanner(System.in);
-		 String s = scan.nextLine();
-		 User user=new User();
-		 user.setEmail("BBB");
-		 int x=user.checkemail(user.getEmail());
-		 System.out.println(x);
-		 for(int i=0;i<email.size();i++)
-		 {
-			 System.out.println(email.get(i));
-		 }
-	}*/
-
+	
 	public String getCustomerName() {
 		return CustomerName;
 	}

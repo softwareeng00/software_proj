@@ -17,7 +17,7 @@ public class OrderDistributor {
 
         int currentWorkerIndex = 0;
         int ordersAssigned = 0;
-        for (ProductMain order : orders) {///
+        for (ProductMain order : orders) {
             workers.get(currentWorkerIndex).addOrder(order);
             ordersAssigned++;
             if (ordersAssigned % avg == 0) {

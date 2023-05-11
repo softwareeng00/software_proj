@@ -6,9 +6,9 @@ public class Transaction {
 	Bill b=new Bill();
 	ProductMain p=new ProductMain();
     
-    private String itemId;//
-    private double price;//
-    private double cashPaid;//
+    private String itemId;
+    private double price;
+    private double cashPaid;
     private double debtPaid;
     
     public Transaction()
@@ -16,8 +16,8 @@ public class Transaction {
     	this.price=b.getPrice();
     	this.itemId=p.getID();
     	this.cashPaid=b.getTotalPrice();
-    	//dept??
-    	this.debtPaid=b.getTotalPrice();//check
+    	
+    	this.debtPaid=b.getTotalPrice();
     	
     }
     
@@ -52,11 +52,7 @@ public class Transaction {
     
     public double getTotalCash() {
         double totalCash = 0.0;
-       /* for(int i =0;i<=transactions.size() ;i++)
-        {
-        	Transaction transaction = null;
-        	totalCash += transaction.getCashPaid();
-        }*/
+      
         for (Transaction transaction : transactions) {
             totalCash += transaction.getCashPaid();
         }

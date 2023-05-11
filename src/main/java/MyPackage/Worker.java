@@ -38,7 +38,7 @@ public class Worker {
 		ProductMain P=new ProductMain();
 		Worker W=new Worker();
 		String saver=P.id;
-		String saver2=W.getName();///random choice
+		String saver2=W.getName();
 		String WPdata=saver+saver2;	
 		return WPdata;
 	}
@@ -82,36 +82,17 @@ public class Worker {
 		}
 		
 		return 0;
-		/*for(int i=0;i<passworker.size();i++)
-		{
-			if(string2.equals(passworker.get(i)))
-			{
-				is_worker=1;
-		        return 1;
-			}
-		}
-		
-			is_worker=0;
-		    return 0;*/
+	
 	}
 	public int checkemail(String string) {
-		// TODO Auto-generated method stub
+		
 		if(string.equals("jadmohmd33@gmail.com") || string.equals("ayamoinn44@gmail.com")
 				|| string.equals("mohmd55t44@gmail.com")) {
 			return 1;
 		}
 		
 		return 0;
-		/*for(int i=0;i<emailworker.size();i++)
-		{
-			if(string.equals(emailworker.get(i)))
-			{
-				is_worker=1;
-		        return 1;
-			}
-		}
-		is_worker=0;
-		return 0;*/
+		
 	}
 	
 	public static void printWorker() {
@@ -175,7 +156,7 @@ public class Worker {
 		this.birthdate = birthdate;
 	}
 	public void addOrder(ProductMain order) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	

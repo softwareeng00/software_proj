@@ -29,7 +29,7 @@ public class Main {
 		
 		
 		
-		if(userselected==1)//admin
+		if(userselected==1)
 		{
 			int userselected1 = 0;
 			System.out.print("USERNAME : ");
@@ -81,10 +81,7 @@ public class Main {
                 case 6:
                 	if(countprod1==0)
                 	countprod1=1;
-                	/*System.out.print("Show Product In Waiting : ");
-					String Wait=scc.next();
-					ProductMain po=new ProductMain();
-					ProductMain.productInWaiting();*/
+                	
                 	System.out.println("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
                 	System.out.println("* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
                 			         + "* powders and materials to deal with all kinds of stains and dirt                    *");
@@ -137,7 +134,7 @@ public class Main {
 			
 		}
 		
-		if(userselected==2)//Worker
+		if(userselected==2)
 			
 		 {
 			int userselected2 = 0;
@@ -153,7 +150,7 @@ public class Main {
             
 
 			do
-			{//////worker
+			{
 				 if(flagworker) {
 				userselected2 =Workermenu();
 				switch(userselected2)
@@ -195,7 +192,7 @@ public class Main {
              
              
 		 }
-	 if(userselected==3)//Customer
+	 if(userselected==3)
 	 {
 		 System.out.print("1- You have an account\n");
 		 System.out.println("2- Create account ");
@@ -228,7 +225,6 @@ public class Main {
 			case 1 : 
 				 System.out.println("Option 1 is selected. Thank u ");
 				 System.out.println("Please Enter Information of your product");
-				//ProductMain M=new ProductMain();  //
 				
 				
 				
@@ -238,30 +234,21 @@ public class Main {
 				nameofprod=M.name;
 				height=Integer.parseInt(M.high);
 				width=Integer.parseInt(M.width);
-				//ProductMain P=new ProductMain();
-				//nameofprod=M.name;
+				
 				if(x2==0) {
-					//ProductMain P4=new ProductMain();
-					//nameofprod=P4.name;
+					
 				}
 				M.createProduct(g.toString(), M.type, nameofprod, M.image, M.description, M.specialtreatment,M.high,M.width);
 				System.out.println("Your product added to the system\n");
 				countprod++;countprod1++;
 				flagintitail=true;
-			//	ProductMain.printProduct();
-			//	System.out.println("\n");
+			
 				
 		
 				
 			break;
 			case 2:
-				/*for(int i=0;i<ProductMain.prod.size();i++)
-				{
-					System.out.println(ProductMain.prod.get(i).id+
-							ProductMain.prod.get(i).description+ProductMain.prod.get(i).image+ProductMain.prod.get(i).name
-							 +ProductMain.prod.get(i).specialtreatment+ProductMain.prod.get(i).type
-							 +ProductMain.prod.get(i).high+ProductMain.prod.get(i).width);
-				}*/
+				
 				System.out.println("Option 2 is selected. Thank u ");
 				
 				System.out.print("Enter name of product you need to update : ");
@@ -274,10 +261,8 @@ public class Main {
 				M1=scan();
 				height=Integer.parseInt(M1.high);
 				width=Integer.parseInt(M1.width);
-				//ProductMain P1=new ProductMain();
 				nameofprod=M1.name;
-				//if(M1.name==null) {
-				//nameofprod=P1.name;}
+				
 				M1.updateProduct(in.toString(), M1.type, M1.name, M1.image, M1.description, M1.specialtreatment,M1.high,M1.width);
 				System.out.println("Your product updating in the system");
 				
@@ -294,14 +279,7 @@ public class Main {
 				
 				break;
 			case 4:
-				/*for(int i=0;i<ProductMain.prod.size();i++)
-				{
-					System.out.println(ProductMain.prod.get(i).id+
-							ProductMain.prod.get(i).description+ProductMain.prod.get(i).image+ProductMain.prod.get(i).name
-							 +ProductMain.prod.get(i).specialtreatment+ProductMain.prod.get(i).type
-							 +ProductMain.prod.get(i).high+ProductMain.prod.get(i).width);
-				}*/
-				//Customer C3=new Customer();
+				
 				
 				for(int i=0;i<Customer.user1.size();i++) {
 					
@@ -361,11 +339,7 @@ public class Main {
 			
 			 }}
 			
-		/*	else {
-           	 System.out.println("\nYour USERNAME or PASSWORD is incorrect");
-           	 System.out.println("Please try again");
-             break;
-			}*/}
+		}
 			else {
 				emails=createaccountcus();
 				x=1;
@@ -377,8 +351,7 @@ public class Main {
 		 
 		while(userselected3<7 );
 		{    
-			 //if(flaguser)
-			//System.out.printf(" input error \n Please Try Again \n");
+			 
 
 			userselected =firstMenu();
 			
@@ -389,8 +362,7 @@ public class Main {
 	 
 	 else
 	 {
-			//System.out.printf(" input error \n Please Try Again \n");
-			//make another one
+			
 
 		 
 	 }
@@ -491,8 +463,7 @@ public class Main {
 
 
 			System.out.println("★              ★");
-			//System.out.println("★    3- update state           ★");
-			//System.out.println("★    3- Number of Carpet             ★");
+			
 			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
 			System.out.println("Select your option : ");
 

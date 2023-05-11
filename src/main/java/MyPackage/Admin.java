@@ -23,8 +23,7 @@ public class Admin {
 	}
 	public void setEmail(String email) {
 		Email = email;
-		//if (!emailadmin.contains(email))
-		//	 emailadmin.add(email);
+		
 	}
 	public String getPassword() {
 		return password;
@@ -38,17 +37,7 @@ public class Admin {
 	
 	
 	public int checkemail(String string) {
-		// TODO Auto-generated method stub
-		/*for(int i=0;i<emailadmin.size();i++)
-		{
-			if(string.equals(emailadmin.get(i)))
-			{
-				is_admin=1;
-		        return 1;
-			}
-		}
-		is_admin=0;
-		return 0;*/
+	
 		if(string.equals("ahmedmoeen@gmail.com") ) {
 			return 1;
 		}
@@ -56,17 +45,7 @@ public class Admin {
 		return 0;
 	}
 	public int checkpass(String string2) {
-		// TODO Auto-generated method stub
-		/*for(int i=0;i<passadmin.size();i++)
-		{
-			if(string2.equals(passadmin.get(i)))
-			{
-				is_admin=1;
-		        return 1;
-			}
-		}
-		is_admin=0;
-		return 0;*/
+		
 		if(string2.equals("ahmed22")) {
 			return 1;
 		}
