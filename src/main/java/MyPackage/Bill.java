@@ -1,6 +1,8 @@
 package MyPackage;
 import java.util.Random;
 public class Bill {
+	
+	
 	int ay;
 	public int price;
 	public int totalprice;
