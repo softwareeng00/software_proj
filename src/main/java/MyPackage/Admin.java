@@ -1,27 +1,28 @@
 package MyPackage;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import io.cucumber.java.it.Date;
 
 public class Admin {
 	int ayaaaa;
+    public static boolean testing =false;
 	int id;
 	String name;
-	String address;
-		int phone;
+	String Address;
+	static int is_admin=0;
+	int phone;
 	Date birthdate;
-	private String email;
+	private String Email;
 	private String password;
-	 static List<String> emailAdmin =new ArrayList<>() ;
-	 static List<String> passAdmin =new ArrayList<>() ;
+	public static ArrayList<String> emailadmin =new ArrayList<String>() ;
+	public static ArrayList<String> passadmin =new ArrayList<String>() ;
 	
 	public String getEmail() {
-		return this.email;
+		return Email;
 	}
 	public void setEmail(String email) {
-		this.email = email;
+		Email = email;
 		
 	}
 	public String getPassword() {
@@ -29,8 +30,8 @@ public class Admin {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-		if (!passAdmin.contains(password))
-			passAdmin.add(password);
+		if (!passadmin.contains(password))
+			passadmin.add(password);
 		
 	}
 	
@@ -53,4 +54,3 @@ public class Admin {
 	}
 	
 }
-
