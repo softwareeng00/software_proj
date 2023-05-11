@@ -26,7 +26,7 @@ public class Bill {
 	public int discountInNumber(int x,int price) {
 		
 		if(x>=6) {
-			x=x-1;
+			x--;
 		}
 		
 		return x;

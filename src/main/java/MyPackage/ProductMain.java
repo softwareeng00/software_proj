@@ -169,7 +169,7 @@ public class ProductMain {
 				{
 					
 						try {
-							if(Customer.user1.get(i).Address.equals("Nablus")){
+							if(Customer.user1.get(i).addresss.equals("Nablus")){
 							TimeUnit.MINUTES.sleep(1);
 								}
 							

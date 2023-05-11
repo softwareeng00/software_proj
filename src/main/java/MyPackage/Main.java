@@ -97,10 +97,7 @@ public class Main {
                 	System.out.println("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
 					break;
                 case 7:
-                	Transaction a =new Transaction();
-                	a.getCashPaid();
-                	a.getDebtPaid();
-                	a.getPrice();
+                	
                 	System.out.print("The total cash offerd is 7500 \n");
                 	System.out.print("The Total dept is 1500\n");
                 	System.out.print("The Price for a piece is 500\n");
@@ -288,7 +285,8 @@ public class Main {
 						System.out.println("*	        SSN " + Customer.user1.get(i).id+	  "			  *");
 						System.out.println("*		Name " + Customer.user1.get(i).name+	"		  *");
 						System.out.println("*		Phone " + Customer.user1.get(i).phone+	"	  *");
-						System.out.println("*		Address " + Customer.user1.get(i).Address+	"		  *");
+						Customer.user1.get(i);
+						System.out.println("*		addresss " + Customer.addresss+	"		  *");
 						System.out.println("*		Product " + nameofprod+	"	          *");
 						Bill B=new Bill();
 						int BILL=B.priceProd(height,width,countprod);pr1=BILL;
@@ -542,7 +540,7 @@ public class Main {
 		System.out.println("Welcome\nYou now in create account page\nEnter your information");
 		System.out.print("SSN : ");F.id=n.next();
 		System.out.print("Name : ");F.name=n.next();
-		System.out.print("Adderess : ");F.Address=n.next();
+		System.out.print("Adderess : ");F.addresss=n.next();
 		System.out.print("Phone : ");F.phone=n.next();
 		System.out.print("Email : ");F.setEmail(n.next());
 		System.out.print("Password : ");F.setPassword(n.next());
