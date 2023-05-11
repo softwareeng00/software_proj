@@ -26,10 +26,3 @@ Scenario: User has the wrong password or email
       | "aya"    | "ayamoinn44@gmail.com" | "ayaaya1" | worker   |
       | "jad"    | "jadmohmd33@gmail.com" | "jad3333" | worker   |
       | "mohamd" | "mohmd55t44@gmail.com" | "mohmd36" | worker   |
-	
-
-
-
-
-
- 
