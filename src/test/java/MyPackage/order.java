@@ -75,7 +75,7 @@ public class order {
 
 		@Given("the worker get the product to clean")
 		public void the_worker_get_the_product_to_clean() {
-			 Worker.workerproduct();
+			 Worker.workerProduct();
 
 		}
 
