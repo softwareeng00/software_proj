@@ -45,7 +45,7 @@ public class Worker {
 	
 	public static boolean workerproduct()
 	{
-		if(workerProduct().equals(null))
+		if(workerProduct()==null)
 			
 		return false;
 		

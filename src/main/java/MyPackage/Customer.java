@@ -102,7 +102,7 @@ public String phone;
 			if(num.equals(phone1.get(i)));
 			return 1;
 		}
-	return 1;
+	return 0;
 		
 	}
 	
@@ -161,7 +161,7 @@ public String phone;
 		for(int i=0;i<CustomerData.size();i++)
 		{
 			
-		if(CustomerData.get(i).getCustomerPhoneNumber()==ph1)
+		if(CustomerData.get(i).getCustomerPhoneNumber().equals(ph1))
 			CustomerData.set(i, this);
 		}
 	
@@ -171,7 +171,7 @@ public String phone;
 		
 		for(int i=0;i<CustomerData.size();i++)
 		{
-			if(CustomerData.get(i).getCustomerPhoneNumber()==ph1)
+			if(CustomerData.get(i).getCustomerPhoneNumber().equals(ph1))
 				CustomerData.remove(i);
 			
 		}
