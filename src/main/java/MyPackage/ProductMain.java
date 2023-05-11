@@ -93,7 +93,8 @@ public class ProductMain {
 	
 		  try {
 			 
-			 if(semaphore.await(2, TimeUnit.SECONDS))
+			  boolean time= !semaphore.await(2, TimeUnit.SECONDS);
+			  if(time)
 			 inwait=true;
 				
 			
@@ -120,7 +121,8 @@ public class ProductMain {
 
 		  
 		  try {
-			 if(semaphore.await(2, TimeUnit.SECONDS))
+			  boolean time= !semaphore.await(2, TimeUnit.SECONDS);
+			  if(time)
 			 incleaning =true;
 				
 			
@@ -147,7 +149,8 @@ public class ProductMain {
 
 			  
 			  try {
-				if( semaphore.await(2, TimeUnit.SECONDS))
+				  boolean time= !semaphore.await(2, TimeUnit.SECONDS);
+				  if(time)
 				 completed =true;
 					
 				
