@@ -11,6 +11,7 @@ public class Worker {
 	private String name;
 	
 	private int phone;
+	private String adder;
 	private String password;
 	static int isWorker=0;
 	
@@ -23,18 +24,15 @@ public class Worker {
 	public void creatWorker(String name,String address,int phone,Date date,String email,String password )
 	{
 	this.setName(name);
-	this.setAddrr(address);
+	this.setAdder(address);
 	this.setPhone(phone);
-	this.setBirthdate(date);
+	
 	this.setEmail(email);
 	this.setPassword(password);
 	if(!workerList.contains(this))
-	workerList.add(this);
+		workerList.add(this);
 	}
-	private void setBirthdate(Date date) {
 	
-		
-	}
 	public static String workerProduct()
 	{
 	
@@ -49,7 +47,7 @@ public class Worker {
 	
 	
 	public Worker() {
-		
+		this.name="aya";
 	}
 
 	public void setEmail(String email) {
@@ -128,13 +126,6 @@ public class Worker {
 
 	
 
-	public void setAddrr(String address) {
-		
-	}
-public String getAddrr(String address) {
-	
-		return address;
-	}
 
 	public int getPhone() {
 		return phone;
@@ -142,6 +133,14 @@ public String getAddrr(String address) {
 
 	public void setPhone(int phone) {
 		this.phone = phone;
+	}
+
+	public String getAdder() {
+		return adder;
+	}
+
+	public void setAdder(String adder) {
+		this.adder = adder;
 	}
 
 	

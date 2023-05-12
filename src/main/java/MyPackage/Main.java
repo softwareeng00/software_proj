@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class Main {
 
+	private static final String opt = "Select your option : ";
+	private static final String t ="\t";
+	private static final String str="  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★";
 	public static void main(String[] args) {
 		
 		boolean flagintitail=false;
@@ -26,6 +29,8 @@ public class Main {
 		boolean flagaccount=false;
 		String  emails=null;
 		int x2=0;
+		
+	
 		userselected =firstMenu();
 		while(userselected!=99) {
 		String ayy="USERNAME : ";
@@ -293,17 +298,17 @@ public class Main {
 					
 					if(Customer.user1.get(i).getEmail().equals(emails) ) {
 						System.out.println("* * * * * * * * * * * * * * * * * * * * * *");
-						System.out.println("*\t\tSSN " + Customer.user1.get(i).id+	  "\t\t\t  *");
-						System.out.println("*\t\tName " + Customer.user1.get(i).name+	"\t\t  *");
-						System.out.println("*\t\tPhone " + Customer.user1.get(i).phone+	"\t  *");
+						System.out.println("*"+t+t+"SSN " + Customer.user1.get(i).id+	  t+t+"  *");
+						System.out.println("*"+t+t+"Name " + Customer.user1.get(i).name+	 t+t+"  *");
+						System.out.println("*"+t+t+"Phone " + Customer.user1.get(i).phone+	 t+t+"  *");
 						Customer.user1.get(i);
-						System.out.println("*\t\taddresss " + Customer.addresss+	"\t\t  *");
-						System.out.println("*\t\tProduct " + nameofprod+	"\t\t  *");
+						System.out.println("*"+t+t+"addresss " + Customer.addresss+	 t+t+"  *");
+						System.out.println("*"+t+t+"Product " + nameofprod+	 t+t+"  *");
 						Bill b=new Bill();
 						int billCus=b.priceProd(height,width,countprod);pr1=billCus;
-						System.out.println("*\t\tPrice " +billCus+"$"+	"\t\t  *");
-						System.out.println("*\t\tDelivary 20$" +		"\t\t  *");
-						System.out.println("*\t\tTotal Price " +b.totalPriceofproduct(height,width,countprod)+"$"+"\t\t  *");
+						System.out.println("*"+t+t+"Price " +billCus+"$"+	 t+t+"  *");
+						System.out.println("*"+t+t+"Delivary 20$" +		 t+t+"  *");
+						System.out.println("*"+t+t+"Total Price " +b.totalPriceofproduct(height,width,countprod)+"$"+ t+t+"  *");
 						System.out.println("* * * * * * * * * * * * * * * * * * * * * *");
 					}
 				}
@@ -318,18 +323,20 @@ public class Main {
 					break;
 			case 6:
 				int o1=0;
+				String diss="Price before Discount : ";
 				Bill c=new Bill();
 				if(flagintitail ) {
 					flagintitail=false;
 					if(!emails.equals("ayamoinn@gmail.com")){
 					o1=c.discountInPrice10(pr1,5);
-					System.out.println("Price before Discount : "+pr1);
+					
+					System.out.println(diss+pr1);
 					System.out.println("Price after Discoaunt : "+o1);}
 					
 				}
 				if(pr1>600) {
 					o1=c.discountInPrice10(pr1,10);
-					System.out.println("Price before Discount : "+pr1);
+					System.out.println(diss+pr1);
 					System.out.println("Price after Discount : "+o1);
 				}
 				if(countprod>6) {
@@ -338,7 +345,7 @@ public class Main {
 				      
 				      
 				      int y=o1*pr1;
-				      System.out.println("Price before Discount : "+pr1);
+				      System.out.println(diss+pr1);
 					  System.out.println("Price after Discount : "+y);
 				}
 				break;
@@ -392,16 +399,16 @@ public class Main {
 		int selection ;
 		 Scanner sc = new Scanner(System.in);
 		 
-		    System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
+		    System.out.println(str);
 		    System.out.println("★        Welcome:            ★");
-		    System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
+		    System.out.println(str);
 			System.out.println("★        Login as :          ★");
 			System.out.println("★        1- Admin            ★");
 			System.out.println("★        2- Worker           ★");
 			System.out.println("★        3- Customer         ★");
 			System.out.println("★        4- Exit             ★");
-			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
-			System.out.print("Select your option : ");
+			System.out.println(str);
+			System.out.print(opt);
 			selection=sc.nextInt();
 			
 		
@@ -416,17 +423,17 @@ public class Main {
 	{
 		int selection ;
 		 Scanner sc = new Scanner(System.in);
-		
+		  	
 		    System.out.println("          Admin");
-			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
-			System.out.println("★	1- Show customer       ★");
-			System.out.println("★	2- Show Product	       ★");
-			System.out.println("★	3- Show worker         ★");
-			System.out.println("★	4- Delete Customer     ★");
-			System.out.println("★	5- Delete Product      ★");
-			System.out.println("★	6- report              ★");
-			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
-			System.out.print("Select your option : ");
+			System.out.println(str+" ★");
+			System.out.println("★	1- Show customer"+t+"★");		
+			System.out.println("★	2- Show Product "+t+"★");     
+			System.out.println("★	3- Show worker "+t+t+"★");
+			System.out.println("★	4- Delete Customer"+t+"★");
+			System.out.println("★	5- Delete Product"+t+"★");
+			System.out.println("★	6- report"+t+t+"★");
+			System.out.println(str+" ★");
+			System.out.print(opt);
 			selection=sc.nextInt();
 
 	return selection;
@@ -441,15 +448,15 @@ public class Main {
 		
 
 		    System.out.println("            Customer");
-		    System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
-			System.out.println("★	1- Add Product		    ★");
-			System.out.println("★	2- Updtate Product	    ★");
-			System.out.println("★	3- Delete Product	    ★");
-			System.out.println("★	4- get bill	            ★");
-			System.out.println("★	5- get Order Status         ★");
-			System.out.println("★	6- discount                 ★");
-			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
-			System.out.print("Select your option : ");
+		    System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+			System.out.println("★	1- Add Product"+t+t+"★");
+			System.out.println("★	2- Updtate Product"+t+"★");
+			System.out.println("★	3- Delete Product"+t+"★");
+			System.out.println("★	4- get bill"+t+t+"★");
+			System.out.println("★	5- get Order Status"+t+"★");
+			System.out.println("★	6- discount"+t+t+"★");
+			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+			System.out.print(opt);
 			
 
 			selection=sc.nextInt();
@@ -479,7 +486,7 @@ public class Main {
 			System.out.println("★              ★");
 			
 			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-			System.out.println("Select your option : ");
+			System.out.println(opt);
 
 			selection=sc.nextInt();
 			System.out.println("Your selected option is: ");

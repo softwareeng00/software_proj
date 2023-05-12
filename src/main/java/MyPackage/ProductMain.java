@@ -43,7 +43,7 @@ public class ProductMain {
 		
 		
 		if(!prod.contains(this))
-		prod.add(this);
+			prod.add(this);
 		
 		
 		
@@ -70,7 +70,7 @@ public class ProductMain {
 		for(int i=0;i<prod.size();i++)
 		{
 			if(prod.get(i).id.equals(id))
-			prod.remove(i);
+				prod.remove(i);
 			
 		}
 	
@@ -95,7 +95,7 @@ public class ProductMain {
 			 
 			  boolean time= !semaphore.await(2, TimeUnit.SECONDS);
 			  if(time)
-			 inwait=true;
+				  inwait=true;
 				
 			
 			
@@ -116,14 +116,14 @@ public class ProductMain {
 			
 		 
 		 if(inwait ) {
-		 CountDownLatch semaphore = new CountDownLatch(1);
+			 CountDownLatch semaphore = new CountDownLatch(1);
 	
 
 		  
 		  try {
 			  boolean time= !semaphore.await(2, TimeUnit.SECONDS);
 			  if(time)
-			 incleaning =true;
+				  incleaning =true;
 				
 			
 			
@@ -151,7 +151,7 @@ public class ProductMain {
 			  try {
 				  boolean time= !semaphore.await(2, TimeUnit.SECONDS);
 				  if(time)
-				 completed =true;
+					  completed =true;
 					
 				
 				
