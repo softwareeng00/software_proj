@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import mypackage.Customer;
 
-public class CusTest {
+public class Customm {
 	public static boolean CustomerFlag=false;
 	public static boolean flagadd=false;
 	public static boolean flagupdate=false;
@@ -16,7 +16,7 @@ public class CusTest {
 	Customer c;
 	Customer user;
 
-	public CusTest() {
+	public Customm() {
 		user=new Customer();
 		
 	}
