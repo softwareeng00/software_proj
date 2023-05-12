@@ -1,4 +1,4 @@
-package myPackage;
+package mypackage;
 
 import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "Use_Cases",
-		glue="myPackage",
+		glue="mypackage",
 		plugin = {"pretty","html:target/outcucumber.html"}
 )
 

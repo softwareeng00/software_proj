@@ -1,11 +1,11 @@
-package myPackage;
+package mypackage;
 
 import static org.junit.Assert.assertTrue;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import myPackage.ProductMain;
-import myPackage.Worker;
+import mypackage.ProductMain;
+import mypackage.Worker;
 
 public class order {
 

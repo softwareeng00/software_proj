@@ -1,10 +1,10 @@
-package myPackage;
+package mypackage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import myPackage.Admin;
-import myPackage.Customer;
-import myPackage.Worker;
+import mypackage.Admin;
+import mypackage.Customer;
+import mypackage.Worker;
 
 import static org.junit.Assert.assertTrue;
 
