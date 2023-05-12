@@ -28,15 +28,15 @@ public class Main {
 		int x2=0;
 		userselected =firstMenu();
 		while(userselected!=99) {
+		String ayy="USERNAME : ";
 		
-		
-		
+		String ayy1="PASSWORD : ";
 		if(userselected==1)
 		{
 			int userselected1 = 0;
-			System.out.print("USERNAME : ");
+			System.out.print(ayy);
 			String a1=scc.next();
-			System.out.print("PASSWORD : ");
+			System.out.print(ayy1);
 			String a2=scc.next();
 			if(aa.checkemail(a1)==1 && aa.checkpass(a2)==1)
 			{
@@ -82,7 +82,7 @@ public class Main {
                 	break;
                 case 6:
                 	if(countprod1==0)
-                	countprod1=1;
+                		countprod1=1;
                 	
                 	System.out.println("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
                 	System.out.println("* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
@@ -105,7 +105,9 @@ public class Main {
                 	System.out.print("The Price for a piece is 500\n");
                 	
                 	break;
-                
+                	default : 
+                		System.out.print("Thank you");
+                		break;
 				
 				
 				
@@ -139,9 +141,9 @@ public class Main {
 		 {
 			int userselected2 = 0;
 			
-			System.out.print("USERNAME : ");
+			System.out.print(ayy);
 			String w1=scc.next();
-			System.out.print("PASSWORD : ");
+			System.out.print(ayy1);
 			String w2=scc.next();
 			if(w.checkemail(w1)==1 && w.checkpass(w2)==1)
 			{
@@ -173,7 +175,12 @@ public class Main {
 					userselected =firstMenu();
 
 					break;
+					
+				default : 
+            		System.out.print("Welcome ");
+            		break;
 				}
+					
 			
 			 }
 			else {
@@ -208,9 +215,9 @@ public class Main {
 		String cc2; 
 			if(x==1) {
 				if(!flagaccount) {
-			System.out.print("USERNAME : ");
+			System.out.print(ayy);
 			 cc1=scc.next();emails=cc1;
-			System.out.print("PASSWORD : ");
+			System.out.print(ayy1);
 			 cc2=scc.next();
 			flagaccount=true;
 			
@@ -281,23 +288,22 @@ public class Main {
 				
 				break;
 			case 4:
-				
-				
+					
 				for(int i=0;i<Customer.user1.size();i++) {
 					
 					if(Customer.user1.get(i).getEmail().equals(emails) ) {
 						System.out.println("* * * * * * * * * * * * * * * * * * * * * *");
-						System.out.println("*	        SSN " + Customer.user1.get(i).id+	  "			  *");
-						System.out.println("*		Name " + Customer.user1.get(i).name+	"		  *");
-						System.out.println("*		Phone " + Customer.user1.get(i).phone+	"	  *");
+						System.out.println("*\t\tSSN " + Customer.user1.get(i).id+	  "\t\t\t  *");
+						System.out.println("*\t\tName " + Customer.user1.get(i).name+	"\t\t  *");
+						System.out.println("*\t\tPhone " + Customer.user1.get(i).phone+	"\t  *");
 						Customer.user1.get(i);
-						System.out.println("*		addresss " + Customer.addresss+	"		  *");
-						System.out.println("*		Product " + nameofprod+	"	          *");
+						System.out.println("*\t\taddresss " + Customer.addresss+	"\t\t  *");
+						System.out.println("*\t\tProduct " + nameofprod+	"\t\t  *");
 						Bill b=new Bill();
 						int billCus=b.priceProd(height,width,countprod);pr1=billCus;
-						System.out.println("*		Price " +billCus+"$"+	"		  *");
-						System.out.println("*		Delivary 20$" +		"		  *");
-						System.out.println("*		Total Price " +b.totalPriceofproduct(height,width,countprod)+"$"+"	  *");
+						System.out.println("*\t\tPrice " +billCus+"$"+	"\t\t  *");
+						System.out.println("*\t\tDelivary 20$" +		"\t\t  *");
+						System.out.println("*\t\tTotal Price " +b.totalPriceofproduct(height,width,countprod)+"$"+"\t\t  *");
 						System.out.println("* * * * * * * * * * * * * * * * * * * * * *");
 					}
 				}
@@ -318,7 +324,7 @@ public class Main {
 					if(!emails.equals("ayamoinn@gmail.com")){
 					o1=c.discountInPrice10(pr1,5);
 					System.out.println("Price before Discount : "+pr1);
-					System.out.println("Price after Discount : "+o1);}
+					System.out.println("Price after Discoaunt : "+o1);}
 					
 				}
 				if(pr1>600) {
@@ -336,7 +342,9 @@ public class Main {
 					  System.out.println("Price after Discount : "+y);
 				}
 				break;
-		
+			default : 
+        		System.out.print("Hello");
+        		break;
 				}
 			
 			

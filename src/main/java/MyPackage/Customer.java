@@ -29,21 +29,22 @@ public class Customer {
 	private String emaill;
 	private String password;
 	 int reguser=0;
-	
+	 private String  aya="ayamoinn@gmail.com";
+	 private String  aya1="useruser";
 	public Customer()
 	{
 		this.id="11";
 		this.name="aya";
 		this.addresss="Nablus";
-		this.emaill="ayamoinn@gmail.com";
-		this.password="useruser";
+		this.emaill=aya;
+		this.password=aya1;
 		phone1.add("0687347273");
 		this.phone="0687347273";
 		user1.add(this);
-		if (!pass.contains("useruser"))
-		pass.add("useruser");
-		if (!email.contains("ayamoinn@gmail.com"))
-			 email.add("ayamoinn@gmail.com");
+		if (!pass.contains(aya1))
+			pass.add(aya1);
+		if (!email.contains(aya))
+			email.add(aya);
 	}
 	
 	public String getEmail() {
@@ -83,8 +84,8 @@ public class Customer {
 	}
 	
 	public int checkemail(String e) {
-		if (!email.contains("ayamoinn@gmail.com"))
-			 email.add("ayamoinn@gmail.com");
+		if (!email.contains(aya))
+			 email.add(aya);
 		for(int i=0;i<email.size();i++)
 		{
 			if(e.equals(email.get(i)))
@@ -99,7 +100,7 @@ public class Customer {
 		for(int i=0;i<phone1.size();i++)
 		{
 			if(num.equals(phone1.get(i)))
-			return 1;
+				return 1;
 		}
 	return 0;
 		
