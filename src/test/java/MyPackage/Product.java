@@ -77,7 +77,7 @@ public void creating_product_succes_flagproduct(String string) {
  
 	 if(flagproduct==string.equals("false")) {
 		   flagcreateprod=true;
-			product.createProduct(product.id,product.type , product.name, product.image, product.description, product.specialtreatment,product.high,product.width);
+			product.createProduct(product.id,product.type , product.name,  product.description, product.specialtreatment,product.high,product.width);
 			}
 }
 		
@@ -148,7 +148,7 @@ public void creating_product_succes_flagproduct(String string) {
 	 
 		if(flagadd==true) {
 			flagcreateprod=true;
-			p.createProduct(p.id,p.type , p.name, p.image, p.description, p.specialtreatment,p.high,p.width);
+			p.createProduct(p.id,p.type , p.name,  p.description, p.specialtreatment,p.high,p.width);
 
 		}
 	   
@@ -202,7 +202,7 @@ public void product_update_success_string(String string) {
 		
 		if(flagupdate==string.equals("false")) {
 			flagupdate=true;
-			p.updateProduct(p.id,p.type, p.name, p.image, p.description, p.specialtreatment,p.high,p.width);
+			p.updateProduct(p.id,p.type, p.name,  p.description, p.specialtreatment,p.high,p.width);
 
 		}
 }

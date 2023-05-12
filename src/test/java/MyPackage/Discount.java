@@ -41,7 +41,7 @@ public void the_user_send_product_to_cleaning_system(String string) {
 @Then("the user pay the price of product to {string}")
 public void the_user_pay_the_price_of_product_to(String string) {
      price=Integer.parseInt(string);
-     int g=B.discountInNumber(num,price);
+     int g=B.discountInNumber(num);
      
      if(g==(--num)) {
     	 flagdis=true;

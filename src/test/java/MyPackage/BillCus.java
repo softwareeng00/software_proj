@@ -67,7 +67,7 @@ public class BillCus {
 		int widt=Integer.parseInt(width);
 		
 		if(flagbill && Product.flagcreateprod ) {
-			priceproduct=b.priceProd(heig,widt,con);
+			priceproduct=b.priceProd(heig,con);
 			totalprice=b.totalPriceofproduct(heig,widt,con);
 			
 			
