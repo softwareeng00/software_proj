@@ -1,4 +1,4 @@
-package MyPackage;
+package myPackage;
 
 public class Bill {
 	int ay;

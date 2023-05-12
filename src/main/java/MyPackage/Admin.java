@@ -1,4 +1,4 @@
-package MyPackage;
+package myPackage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +18,7 @@ public class Admin {
 	 static List<String> passAdmin =new ArrayList<>() ;
 	
 	public String getEmail() {
+		
 		return this.email;
 	}
 	public void setEmail(String email) {

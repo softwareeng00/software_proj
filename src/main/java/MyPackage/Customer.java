@@ -1,4 +1,4 @@
-package MyPackage;
+package myPackage;
 
 
 
@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 
 public class Customer {
-	 private static final Logger logger = Logger.getLogger(Main.class.getName());
+	 private static final Logger logger = Logger.getLogger(Customer.class.getName());
 	private String  customerN;
 	private String customerPhone;
 	private String customerAddress;

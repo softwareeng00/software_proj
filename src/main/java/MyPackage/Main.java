@@ -1,4 +1,4 @@
-package MyPackage;
+package myPackage;
 
 
 
@@ -36,7 +36,7 @@ public class Main {
 		boolean flaguser=false;
 		boolean flagaccount=false;
 		String  emails=null;
-		int x2=0;
+	
 		
 	
 		userselected =firstMenu();
@@ -369,7 +369,7 @@ public class Main {
 			else {
 				emails=createaccountcus();
 				x=1;
-				x2=1;
+	
 				flaguser=true;
 				
 			}

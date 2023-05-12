@@ -1,4 +1,4 @@
-package MyPackage;
+package myPackage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class ProductMain {
 	 static boolean inwait=false;
 	 static boolean incleaning=false;
 	 static boolean completed=false;
-	 private static final Logger logger = Logger.getLogger(Main.class.getName());
+	 private static final Logger logger = Logger.getLogger(ProductMain.class.getName());
 	 String name;
 	 String image;
 	 String description;

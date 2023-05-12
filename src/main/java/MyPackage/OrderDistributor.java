@@ -1,4 +1,4 @@
-package MyPackage;
+package myPackage;
 
 import java.util.List;
 
@@ -18,15 +18,15 @@ public class OrderDistributor {
 
         int currentWorkerIndex = 0;
         int ordersAssigned = 0;
-        for (ProductMain order : orders) {
+     
         	
       
             ordersAssigned++;
             if (ordersAssigned % avg == 0) {
                 currentWorkerIndex++;
-            }
+          
             if (currentWorkerIndex == numWorkers) {
-                break;
+                
             }
         }
     }
