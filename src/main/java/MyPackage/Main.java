@@ -29,7 +29,7 @@ public class Main {
 		boolean flagadmin=false;
 		String nameofprod=null;
 		int height=1;
-		int width=1;
+		
 		int countprod=0;
 		int countprod1=0;
 		boolean flagworker=false;
@@ -98,19 +98,19 @@ public class Main {
                 		countprod1=1;
                 	
                 	
-                	logger.info("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
-                	logger.info("* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
+                	logger.fine("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+                	logger.fine("* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
                 			         + "* powders and materials to deal with all kinds of stains and dirt                    *");
                 	int y=ProductMain.numberprodag();
-                	logger.info("* Number of cleaning agent in the system :"+y+"                                        *");
-                	logger.info("* The number of missing cleaning agent must be provided :"+ (500-y)+"                           *");
+                	logger.fine("* Number of cleaning agent in the system :"+y+"                                        *");
+                	logger.fine("* The number of missing cleaning agent must be provided :"+ (500-y)+"                           *");
                 	int z=ProductMain.numberprodeq();
-                	logger.info("* The number of cleaning equipment :"+z+"                                              *");
-                	logger.info("* The number of cleaning equipment that needs maintenance :"+(120-z)+"                         *");
+                	logger.fine("* The number of cleaning equipment :"+z+"                                              *");
+                	logger.fine("* The number of cleaning equipment that needs maintenance :"+(120-z)+"                         *");
                 	int l=ProductMain.proderror();
-                	logger.info("* Carpet cleaning percentage  : "+(l) +"%                                                  *");
-                	logger.info("* Carpet cleaning percentage error: "+( 100 -l) +"%                                              *");
-                	logger.info("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+                	logger.fine("* Carpet cleaning percentage  : "+(l) +"%                                                  *");
+                	logger.fine("* Carpet cleaning percentage error: "+( 100 -l) +"%                                              *");
+                	logger.fine("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
 					break;
                 case 7:
                 	
@@ -256,7 +256,7 @@ public class Main {
 				ProductMain mm1=scan();
 				nameofprod=mm1.name;
 				height=Integer.parseInt(mm1.high);
-				width=Integer.parseInt(mm1.width);
+				
 				
 				
 				mm1.createProduct(g.toString(), mm1.type, nameofprod, mm1.description, mm1.specialtreatment,mm1.high,mm1.width);
@@ -281,7 +281,7 @@ public class Main {
 				
 				ProductMain mmm=scan();
 				height=Integer.parseInt(mmm.high);
-				width=Integer.parseInt(mmm.width);
+				
 				nameofprod=mmm.name;
 				
 				mmm.updateProduct(in.toString(), mmm.type, mmm.name, mmm.description, mmm.specialtreatment,mmm.high,mmm.width);
@@ -401,7 +401,8 @@ public class Main {
 	{
 		int selection ;
 		 Scanner sc = new Scanner(System.in);
-		
+		 
+		 logger.fine("An exception occurred with message: {}");
 		 logger.info(STR);
 		 logger.info("★        Welcome:            ★");
 		 logger.info(STR);
