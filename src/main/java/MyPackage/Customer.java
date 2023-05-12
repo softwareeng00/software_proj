@@ -180,8 +180,17 @@ public class Customer {
 		
 		for(int i=0;i<customerData.size();i++)
 		{
-			if(customerData.get(i).getCustomerPhoneNumber().equals(ph1))
+			if(customerData.get(i).isEmpty())
+				break;
+			else if(customerData.get(i).getCustomerPhoneNumber().equals(ph1))
 				customerData.remove(i); 	 		
 		}
 		}
+private boolean isEmpty() {
+		
+		if(customerData.size()==0)
+		return false;
+		else
+			return true;
+	}
 }

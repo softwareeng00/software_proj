@@ -15,8 +15,8 @@ public class OrderDistributor {
     public int distributeOrders(List<ProductMain> orders) {
         int totalOrders = orders.size();
         int numWorkers = workers.size();
-        int avg = totalOrders / numWorkers;
+       
 
-        return avg;
+        return totalOrders / numWorkers;
     }
 }
