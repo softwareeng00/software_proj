@@ -107,7 +107,7 @@ public class ProductMain {
 			
 		} catch (InterruptedException e) {
 		
-			e.printStackTrace();
+			
 			 Thread.currentThread().interrupt();
 		}
 
@@ -135,7 +135,7 @@ public class ProductMain {
 			
 		} catch (InterruptedException e) {
 			
-			e.printStackTrace();
+			
 			 Thread.currentThread().interrupt();
 		}
 
@@ -163,7 +163,7 @@ public class ProductMain {
 				
 			} catch (InterruptedException e) {
 				
-				e.printStackTrace();
+				
 			       Thread.currentThread().interrupt();
 			}
 
@@ -186,7 +186,7 @@ public class ProductMain {
 							
 						} catch (InterruptedException e) {
 							
-							e.printStackTrace();
+							
 							  Thread.currentThread().interrupt();
 						}
 					}
@@ -206,7 +206,7 @@ public class ProductMain {
 	}
 	public static int numberprodag() {
 		
-	return (int) (500 - 2*Math.random());
+	return (int) (500 - 2*10);
 	
 	}
 	public static int numberprodeq() {
@@ -215,11 +215,13 @@ public class ProductMain {
 		
 		
 		
-		return (int) (120 - 2*Math.random());
+		
+		return (int) (120 - 2*3);
 	}
 	public static int proderror() {
 		int exact=100;
-		int approx=(int)(100 * Math.random());
+		
+		int approx=(int)(100 * 0.5);
 		if(approx >=40) {
 			approx-=40;
 		}

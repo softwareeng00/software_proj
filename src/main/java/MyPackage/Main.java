@@ -424,6 +424,7 @@ public class Main {
 		 
 		 logger.fine("An exception occurred with message: {}");
 		 logger.info(STR);
+		 
 		 logger.info("★        Welcome:            ★");
 		 logger.info(STR);
 		 logger.info("★        Login as :          ★");

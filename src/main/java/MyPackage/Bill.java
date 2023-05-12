@@ -13,7 +13,8 @@ public class Bill {
 		pricefordelivery=20;
 	}
 	public int priceProd(int h,int count) {
-		 
+	
+		
 		
 		
 		return 50*h*count;

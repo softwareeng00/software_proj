@@ -76,6 +76,7 @@ public class Customer {
 		return 0;
 	
 		
+		
 	}
 	public static void printCustomer() {
 		for(int i=0;i<Customer.user1.size();i++)
