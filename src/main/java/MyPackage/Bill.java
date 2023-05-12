@@ -12,7 +12,7 @@ public class Bill {
 		countofprodforcustomer=2;
 		pricefordelivery=20;
 	}
-	public int priceProd(int h,int w,int count) {
+	public int priceProd(int h,int count) {
 		 
 		
 		
@@ -20,10 +20,10 @@ public class Bill {
 	}
 	public int totalPriceofproduct(int h,int w,int count) {
 		 
-		totalprice=20+priceProd(h,w,count);
+		totalprice=20+priceProd(h,count);
 		return totalprice;
 	}
-	public int discountInNumber(int x,int price) {
+	public int discountInNumber(int x) {
 		
 		if(x>=6) {
 			x--;
@@ -36,17 +36,12 @@ public class Bill {
 	public int discountInPrice10(int price,int dis) {
 		 if(price>600)
 			 dis=10;
-		int s=price;
-		s=(price*dis)/100;
+		
+		int s=(price*dis)/100;
 		s=price-s;
 		return s;
 	}
-	public static void main(String[] args) {
-		
-		for(int i=0;i<10;i++) {
-			
-		}
-	}
+	
 	public double getPrice() {
 	
 		return price;

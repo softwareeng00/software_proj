@@ -1,8 +1,10 @@
 package MyPackage;
 
 
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 
 
@@ -35,7 +37,7 @@ public class Customer {
 	{
 		this.id="11";
 		this.name="aya";
-		this.addresss="Nablus";
+		Customer.addresss="Nablus";
 		this.emaill=aya;
 		this.password=aya1;
 		phone1.add("0687347273");
@@ -77,8 +79,11 @@ public class Customer {
 	public static void printCustomer() {
 		for(int i=0;i<Customer.user1.size();i++)
 		{
-			System.out.println("Customer : "+Customer.user1.get(i).id+" "+Customer.user1.get(i).name+" "+Customer.user1.get(i).addresss+" "+
+			
+			Customer.user1.get(i);
+			Logger.getLogger("Customer : "+Customer.user1.get(i).id+" "+Customer.user1.get(i).name+" "+Customer.addresss+" "+
 					Customer.user1.get(i).phone);
+			
 		}
 		
 	}
@@ -172,8 +177,7 @@ public class Customer {
 		for(int i=0;i<customerData.size();i++)
 		{
 			if(customerData.get(i).getCustomerPhoneNumber().equals(ph1))
-				customerData.remove(i);
-			
+				customerData.remove(i); 	 		
 		}
 		}
 }

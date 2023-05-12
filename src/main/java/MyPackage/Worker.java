@@ -21,7 +21,7 @@ public class Worker {
 	 static List<String> passWorker =new ArrayList<>() ;
 	
 	
-	public void creatWorker(String name,String address,int phone,Date date,String email,String password )
+	public void creatWorker(String name,String address,int phone,String email,String password )
 	{
 	this.setName(name);
 	this.setAdder(address);

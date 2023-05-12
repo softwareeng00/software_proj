@@ -34,12 +34,12 @@ public class ProductMain {
 	         prod.add(this);
 		     
     }
-	public void createProduct(String id,String type,String name,String image,String des,String sp,String high,String width)
+	public void createProduct(String id,String type,String name,String des,String sp,String high,String width)
 	{
 		this.id=id;this.type=type;this.description=des;
 		this.name=name;
 		this.specialtreatment=sp;
-		this.image=image;this.high=high;this.width=width;
+		this.high=high;this.width=width;
 		
 		
 		if(!prod.contains(this))
@@ -48,11 +48,11 @@ public class ProductMain {
 		
 		
 	}
-	public void updateProduct(String id1,String type,String name,String image,String des,String sp,String high,String width)
+	public void updateProduct(String id1,String type,String name,String des,String sp,String high,String width)
 	{
 		this.id=id1;this.type=type;this.description=des;
 		this.name=name;this.specialtreatment=sp;
-		this.image=image;this.high=high;this.width=width;
+		this.high=high;this.width=width;
 		
 		
 		for(int i=0;i<prod.size();i++)
@@ -173,7 +173,8 @@ public class ProductMain {
 				{
 					
 						try {
-							if(Customer.user1.get(i).addresss.equals("Nablus")){
+							Customer.user1.get(i);
+							if(Customer.addresss.equals("Nablus")){
 							TimeUnit.MINUTES.sleep(1);
 								}
 							
@@ -197,7 +198,7 @@ public class ProductMain {
 		
 		
 	}
-	public static int numberprodag(int n) {
+	public static int numberprodag() {
 		
 	return (int) (500 - 2*Math.random());
 	
