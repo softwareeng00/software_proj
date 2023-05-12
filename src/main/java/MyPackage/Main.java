@@ -97,12 +97,14 @@ public class Main {
                 	if(countprod1==0)
                 		countprod1=1;
                 	
-                	
-                	logger.fine("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
-                	logger.fine("* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
-                			         + "* powders and materials to deal with all kinds of stains and dirt                    *");
+                	String ayam="  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *";
+                	logger.fine(ayam);
+                	ayam="* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
+       			         + "* powders and materials to deal with all kinds of stains and dirt                    *";
+                	logger.fine(ayam);
                 	int y=ProductMain.numberprodag();
-                	logger.fine("* Number of cleaning agent in the system :"+y+"                                        *");
+                	ayam="* Number of cleaning agent in the system :"+y+"                                        *";
+                	logger.info(ayam);
                 	logger.fine("* The number of missing cleaning agent must be provided :"+ (500-y)+"                           *");
                 	int z=ProductMain.numberprodeq();
                 	logger.fine("* The number of cleaning equipment :"+z+"                                              *");
