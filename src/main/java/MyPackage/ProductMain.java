@@ -71,8 +71,11 @@ public class ProductMain {
 		
 		for(int i=0;i<prod.size();i++)
 		{
-			if(prod.get(i).id.equals(id))
+			if(prod.get(i).id.equals(id)) {
 				prod.remove(i);
+				i--;
+			}
+			    
 			
 		}
 	
