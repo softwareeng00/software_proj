@@ -206,7 +206,7 @@ public class ProductMain {
 	}
 	public static int numberprodag() {
 		
-	return (int) (500 - 2*10);
+	return  (500 - 2*10);
 	
 	}
 	public static int numberprodeq() {
@@ -216,7 +216,7 @@ public class ProductMain {
 		
 		
 		
-		return (int) (120 - 2*3);
+		return  (120 - 2*3);
 	}
 	public static int proderror() {
 		int exact=100;

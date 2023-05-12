@@ -12,17 +12,11 @@ public class OrderDistributor {
     }
 
     
-    public void distributeOrders(List<ProductMain> orders) {
+    public int distributeOrders(List<ProductMain> orders) {
         int totalOrders = orders.size();
         int numWorkers = workers.size();
         int avg = totalOrders / numWorkers;
 
-        int currentWorkerIndex = 0;
-        int ordersAssigned = 0;
-     
-        	
-      
-            ordersAssigned++;
-            
+        return avg;
     }
 }
