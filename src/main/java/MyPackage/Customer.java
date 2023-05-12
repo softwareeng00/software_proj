@@ -34,13 +34,14 @@ public class Customer {
 	 int reguser=0;
 	 private String  aya="ayamoinn@gmail.com";
 	 private String  aya1="useruser";
+	 
 	public Customer()
 	{
 		this.id="11";
 		this.name="aya";
 		
 		this.emaill=aya;
-		this.password=aya1;
+		
 		phone1.add("0687347273");
 		this.phone="0687347273";
 		user1.add(this);
