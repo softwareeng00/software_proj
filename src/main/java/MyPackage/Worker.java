@@ -2,10 +2,12 @@ package MyPackage;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import io.cucumber.java.it.Date;
 
 public class Worker {
+	private static final Logger logger = Logger.getLogger(Main.class.getName());
 	int ay;
 	int id;
 	private String name;
@@ -20,6 +22,7 @@ public class Worker {
 	 static List<String> emailWorker =new ArrayList<>() ;
 	 static List<String> passWorker =new ArrayList<>() ;
 	
+	 
 	
 	public void creatWorker(String name,String address,int phone,String email,String password )
 	{
@@ -87,7 +90,7 @@ public class Worker {
 	}
 	
 	public static void printWorker() {
-		System.out.println("Name         " +"emmaill    \n"+
+		logger.info("Name         " +"emmaill    \n"+
 				           "Aya Moin     " +"ayamoinn44@gmail.com\n"+
 				           "Mohmed samer " +"mohmd55t44@gmail.com\n"+
 				           "jad mohmd    " +"jadmohmd33@gmail.com\n");
@@ -95,7 +98,7 @@ public class Worker {
 	
 	public static void workerName()
 	{
-		System.out.println("Name" +
+		logger.info("Name" +
 		           "Aya Moin\n"+
 		           "Mohmed samer\n"+
 		           "jad mohmd\n\n");
@@ -103,16 +106,16 @@ public class Worker {
 	
 	
 	public static void prodinclean() {
-		System.out.println("Name         " +"    Number    \n"+
+		logger.info("Name         " +"    Number    \n"+
 		           "Canves1     " +"      1\n"+
 		           "Canves + Cover " +"   2\n"+
 		           "Cover    " +"         3\n");
 	}
 	public static void breakTime()
 	{
-		System.out.println("\n Your Work Start at 8:30  to 4:00");
+		logger.info("\n Your Work Start at 8:30  to 4:00");
 
-		System.out.println("\n Your break at 11:00 to 11:30 / break at 2:00 to 2:40");
+		logger.info("\n Your break at 11:00 to 11:30 / break at 2:00 to 2:40");
 	}
 	
 

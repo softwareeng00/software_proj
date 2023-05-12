@@ -8,12 +8,14 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 
+
 public class Main {
 	
 	private static final String OPT = "Select your option : ";
 	private static final String TT ="\t";
 	private static final String STR="  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★";
 	private static final String S1=" ";
+	 private static final Logger logger = Logger.getLogger(Main.class.getName());
 	public static void main(String[] args) {
 		
 		boolean flagintitail=false;
@@ -94,6 +96,7 @@ public class Main {
                 case 6:
                 	if(countprod1==0)
                 		countprod1=1;
+                	
                 	
                 	System.out.println("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
                 	System.out.println("* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
@@ -399,16 +402,16 @@ public class Main {
 		int selection ;
 		 Scanner sc = new Scanner(System.in);
 		
-		 Logger.getLogger(STR);
-		 Logger.getLogger("★        Welcome:            ★");
-		 Logger.getLogger(STR);
-		 Logger.getLogger("★        Login as :          ★");
-		 Logger.getLogger("★        1- Admin            ★");
-		 Logger.getLogger("★        2- Worker           ★");
-		 Logger.getLogger("★        3- Customer         ★");
-		 Logger.getLogger("★        4- Exit             ★");
-			System.out.println(STR);
-			System.out.print(OPT);
+		 logger.info(STR);
+		 logger.info("★        Welcome:            ★");
+		 logger.info(STR);
+		 logger.info("★        Login as :          ★");
+		 logger.info("★        1- Admin            ★");
+		 logger.info("★        2- Worker           ★");
+		 logger.info("★        3- Customer         ★");
+		 logger.info("★        4- Exit             ★");
+		 logger.info(STR);
+		 logger.info(OPT);
 			selection=sc.nextInt();
 			
 		
