@@ -1,13 +1,12 @@
-package myPackage;
+package mypackage;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import io.cucumber.java.it.Date;
 
 public class Worker {
-	private static final Logger logger = Logger.getLogger(Main.class.getName());
+	private static final Logger logger = Logger.getLogger(Worker.class.getName());
 	int ay;
 	int id;
 	private String name;
