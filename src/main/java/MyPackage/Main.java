@@ -8,6 +8,7 @@ public class Main {
 	private static final String OPT = "Select your option : ";
 	private static final String TT ="\t";
 	private static final String STR="  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★";
+	private static final String S1=" ";
 	public static void main(String[] args) {
 		
 		boolean flagintitail=false;
@@ -426,12 +427,12 @@ public class Main {
 		  	
 		    System.out.println("          Admin");
 			System.out.println(STR+" ★");
-			System.out.println("★	1- Show customer"+TT+"★");		
-			System.out.println("★	2- Show Product "+TT+"★");     
-			System.out.println("★	3- Show worker "+TT+TT+"★");
-			System.out.println("★	4- Delete Customer"+TT+"★");
-			System.out.println("★	5- Delete Product"+TT+"★");
-			System.out.println("★	6- report"+TT+TT+"★");
+			System.out.println("★"+S1+"1-"+S1+"Show customer"+TT+"★");		
+			System.out.println("★"+S1+"2-"+S1+"Show Product "+TT+"★");     
+			System.out.println("★"+S1+"3-"+S1+"Show worker "+TT+TT+"★");
+			System.out.println("★"+S1+"4-"+S1+"Delete Customer"+TT+"★");
+			System.out.println("★"+S1+"5-"+S1+"Delete Product"+TT+"★");
+			System.out.println("★"+S1+"6-"+S1+"report"+TT+TT+"★");
 			System.out.println(STR+" ★");
 			System.out.print(OPT);
 			selection=sc.nextInt();
@@ -449,12 +450,12 @@ public class Main {
 
 		    System.out.println("            Customer");
 		    System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-			System.out.println("★	1- Add Product"+TT+TT+"★");
-			System.out.println("★	2- Updtate Product"+TT+"★");
-			System.out.println("★	3- Delete Product"+TT+"★");
-			System.out.println("★	4- get bill"+TT+TT+"★");
-			System.out.println("★	5- get Order Status"+TT+"★");
-			System.out.println("★	6- discount"+TT+TT+"★");
+			System.out.println("★"+S1+"1-"+S1+"Add Product"+TT+TT+"★");
+			System.out.println("★"+S1+"2-"+S1+"Updtate Product"+TT+"★");
+			System.out.println("★"+S1+"3-"+S1+"Delete Product"+TT+"★");
+			System.out.println("★"+S1+"4- "+S1+"get bill"+TT+TT+"★");
+			System.out.println("★"+S1+"5-"+S1+"get Order Status"+TT+"★");
+			System.out.println("★"+S1+"6-"+S1+"discount"+TT+TT+"★");
 			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
 			System.out.print(OPT);
 			
