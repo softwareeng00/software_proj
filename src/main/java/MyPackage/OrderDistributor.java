@@ -25,9 +25,7 @@ public class OrderDistributor {
             if (ordersAssigned % avg == 0) {
                 currentWorkerIndex++;
           
-            if (currentWorkerIndex == numWorkers) {
-                
-            }
+            
         }
     }
 }

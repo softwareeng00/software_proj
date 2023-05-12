@@ -38,7 +38,7 @@ public class Customer {
 	{
 		this.id="11";
 		this.name="aya";
-		Customer.addresss="Nablus";
+		
 		this.emaill=aya;
 		this.password=aya1;
 		phone1.add("0687347273");
@@ -82,8 +82,9 @@ public class Customer {
 		{
 			
 			Customer.user1.get(i);
-			logger.info("Customer : "+Customer.user1.get(i).id+" "+Customer.user1.get(i).name+" "+Customer.addresss+" "+
-					Customer.user1.get(i).phone);
+			String j="Customer : "+Customer.user1.get(i).id+" "+Customer.user1.get(i).name+" "+Customer.addresss+" "+
+					Customer.user1.get(i).phone;
+			logger.info(j);
 			
 		}
 		

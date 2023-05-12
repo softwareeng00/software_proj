@@ -18,7 +18,7 @@ public class Bill {
 		
 		return 50*h*count;
 	}
-	public int totalPriceofproduct(int h,int w,int count) {
+	public int totalPriceofproduct(int h,int count) {
 		 
 		totalprice=20+priceProd(h,count);
 		return totalprice;

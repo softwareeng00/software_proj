@@ -80,7 +80,7 @@ public class Main {
 				
 					break;
                 case 4:
-					System.out.print("Enter SSN of User you need to delete : ");
+                	logger.info("Enter SSN of User you need to delete : ");
 					String cuss=scc.next();
 					Customer r=new Customer();
 					r.deleteCustomer(cuss);
@@ -291,7 +291,7 @@ public class Main {
 				
 				break;
 			case 3:
-				System.out.print("Enter name of product you need to delete : ");
+				logger.info("Enter name of product you need to delete : ");
 				 
 				String hh= scc.next();
 				Integer i1=f1(hh);
@@ -316,12 +316,12 @@ public class Main {
 						int billCus=b.priceProd(height,countprod);pr1=billCus;
 						logger.info("*"+TT+TT+"Price " +billCus+"$"+	 TT+TT+"  *");
 						logger.info("*"+TT+TT+"Delivary 20$" +		 TT+TT+"  *");
-						logger.info("*"+TT+TT+"Total Price " +b.totalPriceofproduct(height,width,countprod)+"$"+ TT+TT+"  *");
+						logger.info("*"+TT+TT+"Total Price " +b.totalPriceofproduct(height,countprod)+"$"+ TT+TT+"  *");
 						logger.info("* * * * * * * * * * * * * * * * * * * * * *");
 					}
 				}
 				
-				System.out.println("");
+				logger.info("");
 				break;
 			case 5:
 				if(ProductMain.productInWaiting() || ProductMain.productInCleaning() || ProductMain.productCompleted())
