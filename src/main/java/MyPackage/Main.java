@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Main {
 
-	private static final String opt = "Select your option : ";
-	private static final String t ="\t";
-	private static final String str="  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★";
+	private static final String OPT = "Select your option : ";
+	private static final String TT ="\t";
+	private static final String STR="  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★";
 	public static void main(String[] args) {
 		
 		boolean flagintitail=false;
@@ -298,17 +298,17 @@ public class Main {
 					
 					if(Customer.user1.get(i).getEmail().equals(emails) ) {
 						System.out.println("* * * * * * * * * * * * * * * * * * * * * *");
-						System.out.println("*"+t+t+"SSN " + Customer.user1.get(i).id+	  t+t+"  *");
-						System.out.println("*"+t+t+"Name " + Customer.user1.get(i).name+	 t+t+"  *");
-						System.out.println("*"+t+t+"Phone " + Customer.user1.get(i).phone+	 t+t+"  *");
+						System.out.println("*"+TT+TT+"SSN " + Customer.user1.get(i).id+	  TT+TT+"  *");
+						System.out.println("*"+TT+TT+"Name " + Customer.user1.get(i).name+	 TT+TT+"  *");
+						System.out.println("*"+TT+TT+"Phone " + Customer.user1.get(i).phone+	 TT+TT+"  *");
 						Customer.user1.get(i);
-						System.out.println("*"+t+t+"addresss " + Customer.addresss+	 t+t+"  *");
-						System.out.println("*"+t+t+"Product " + nameofprod+	 t+t+"  *");
+						System.out.println("*"+TT+TT+"addresss " + Customer.addresss+	 TT+TT+"  *");
+						System.out.println("*"+TT+TT+"Product " + nameofprod+	 TT+TT+"  *");
 						Bill b=new Bill();
 						int billCus=b.priceProd(height,width,countprod);pr1=billCus;
-						System.out.println("*"+t+t+"Price " +billCus+"$"+	 t+t+"  *");
-						System.out.println("*"+t+t+"Delivary 20$" +		 t+t+"  *");
-						System.out.println("*"+t+t+"Total Price " +b.totalPriceofproduct(height,width,countprod)+"$"+ t+t+"  *");
+						System.out.println("*"+TT+TT+"Price " +billCus+"$"+	 TT+TT+"  *");
+						System.out.println("*"+TT+TT+"Delivary 20$" +		 TT+TT+"  *");
+						System.out.println("*"+TT+TT+"Total Price " +b.totalPriceofproduct(height,width,countprod)+"$"+ TT+TT+"  *");
 						System.out.println("* * * * * * * * * * * * * * * * * * * * * *");
 					}
 				}
@@ -399,16 +399,16 @@ public class Main {
 		int selection ;
 		 Scanner sc = new Scanner(System.in);
 		 
-		    System.out.println(str);
+		    System.out.println(STR);
 		    System.out.println("★        Welcome:            ★");
-		    System.out.println(str);
+		    System.out.println(STR);
 			System.out.println("★        Login as :          ★");
 			System.out.println("★        1- Admin            ★");
 			System.out.println("★        2- Worker           ★");
 			System.out.println("★        3- Customer         ★");
 			System.out.println("★        4- Exit             ★");
-			System.out.println(str);
-			System.out.print(opt);
+			System.out.println(STR);
+			System.out.print(OPT);
 			selection=sc.nextInt();
 			
 		
@@ -425,15 +425,15 @@ public class Main {
 		 Scanner sc = new Scanner(System.in);
 		  	
 		    System.out.println("          Admin");
-			System.out.println(str+" ★");
-			System.out.println("★	1- Show customer"+t+"★");		
-			System.out.println("★	2- Show Product "+t+"★");     
-			System.out.println("★	3- Show worker "+t+t+"★");
-			System.out.println("★	4- Delete Customer"+t+"★");
-			System.out.println("★	5- Delete Product"+t+"★");
-			System.out.println("★	6- report"+t+t+"★");
-			System.out.println(str+" ★");
-			System.out.print(opt);
+			System.out.println(STR+" ★");
+			System.out.println("★	1- Show customer"+TT+"★");		
+			System.out.println("★	2- Show Product "+TT+"★");     
+			System.out.println("★	3- Show worker "+TT+TT+"★");
+			System.out.println("★	4- Delete Customer"+TT+"★");
+			System.out.println("★	5- Delete Product"+TT+"★");
+			System.out.println("★	6- report"+TT+TT+"★");
+			System.out.println(STR+" ★");
+			System.out.print(OPT);
 			selection=sc.nextInt();
 
 	return selection;
@@ -449,14 +449,14 @@ public class Main {
 
 		    System.out.println("            Customer");
 		    System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-			System.out.println("★	1- Add Product"+t+t+"★");
-			System.out.println("★	2- Updtate Product"+t+"★");
-			System.out.println("★	3- Delete Product"+t+"★");
-			System.out.println("★	4- get bill"+t+t+"★");
-			System.out.println("★	5- get Order Status"+t+"★");
-			System.out.println("★	6- discount"+t+t+"★");
+			System.out.println("★	1- Add Product"+TT+TT+"★");
+			System.out.println("★	2- Updtate Product"+TT+"★");
+			System.out.println("★	3- Delete Product"+TT+"★");
+			System.out.println("★	4- get bill"+TT+TT+"★");
+			System.out.println("★	5- get Order Status"+TT+"★");
+			System.out.println("★	6- discount"+TT+TT+"★");
 			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-			System.out.print(opt);
+			System.out.print(OPT);
 			
 
 			selection=sc.nextInt();
@@ -486,7 +486,7 @@ public class Main {
 			System.out.println("★              ★");
 			
 			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-			System.out.println(opt);
+			System.out.println(OPT);
 
 			selection=sc.nextInt();
 			System.out.println("Your selected option is: ");
