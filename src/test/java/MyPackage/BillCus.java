@@ -1,10 +1,13 @@
-package MyPackage;
+package myPackage;
 
 import static org.junit.Assert.assertTrue;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import myPackage.Bill;
+import myPackage.Customer;
+import myPackage.ProductMain;
 
 public class BillCus {
 	int ay;

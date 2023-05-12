@@ -1,4 +1,4 @@
-package MyPackage;
+package myPackage;
 import static org.junit.Assert.assertTrue;
 
 import io.cucumber.java.en.Given;
