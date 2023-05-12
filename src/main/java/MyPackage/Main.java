@@ -47,9 +47,9 @@ public class Main {
 		if(userselected==1)
 		{
 			int userselected1 = 0;
-			Logger.getLogger(ayy);
+			logger.info(ayy);
 			String a1=scc.next();
-			Logger.getLogger(ayy1);
+			logger.info(ayy1);
 			String a2=scc.next();
 			if(aa.checkemail(a1)==1 && aa.checkpass(a2)==1)
 			{
@@ -88,7 +88,7 @@ public class Main {
 					break;
                 case 5:
 	
-                	System.out.print("Enter id of Product you need to delete : ");
+                	logger.info("Enter id of Product you need to delete : ");
 					String proo=scc.next();
 					ProductMain pr=new ProductMain();
 					pr.deleteProduct(proo);
@@ -98,29 +98,29 @@ public class Main {
                 		countprod1=1;
                 	
                 	
-                	System.out.println("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
-                	System.out.println("* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
+                	logger.info("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+                	logger.info("* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
                 			         + "* powders and materials to deal with all kinds of stains and dirt                    *");
                 	int y=ProductMain.numberprodag();
-                	System.out.println("* Number of cleaning agent in the system :"+y+"                                        *");
-                	System.out.println("* The number of missing cleaning agent must be provided :"+ (500-y)+"                           *");
+                	logger.info("* Number of cleaning agent in the system :"+y+"                                        *");
+                	logger.info("* The number of missing cleaning agent must be provided :"+ (500-y)+"                           *");
                 	int z=ProductMain.numberprodeq();
-                	System.out.println("* The number of cleaning equipment :"+z+"                                              *");
-                	System.out.println("* The number of cleaning equipment that needs maintenance :"+(120-z)+"                         *");
+                	logger.info("* The number of cleaning equipment :"+z+"                                              *");
+                	logger.info("* The number of cleaning equipment that needs maintenance :"+(120-z)+"                         *");
                 	int l=ProductMain.proderror();
-                	System.out.println("* Carpet cleaning percentage  : "+(l) +"%                                                  *");
-                	System.out.println("* Carpet cleaning percentage error: "+( 100 -l) +"%                                              *");
-                	System.out.println("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+                	logger.info("* Carpet cleaning percentage  : "+(l) +"%                                                  *");
+                	logger.info("* Carpet cleaning percentage error: "+( 100 -l) +"%                                              *");
+                	logger.info("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
 					break;
                 case 7:
                 	
-                	System.out.print("The total cash offerd is 7500 \n");
-                	System.out.print("The Total dept is 1500\n");
-                	System.out.print("The Price for a piece is 500\n");
+                	logger.info("The total cash offerd is 7500 \n");
+                	logger.info("The Total dept is 1500\n");
+                	logger.info("The Price for a piece is 500\n");
                 	
                 	break;
                 	default : 
-                		System.out.print("Thank you");
+                		logger.info("Thank you");
                 		break;
 				
 				
@@ -129,8 +129,8 @@ public class Main {
 			 }
             else
             {
-           	 System.out.println("Your USERNAME or PASSWORD is incorrect");
-           	 System.out.println("Please try again");
+            	logger.info("Your USERNAME or PASSWORD is incorrect");
+            	logger.info("Please try again");
             }
 				
 				
@@ -138,7 +138,7 @@ public class Main {
 			while(userselected1<7);
 			{
 				if(flagadmin) {
-					System.out.println(" Exit");
+					logger.info(" Exit");
 					userselected =firstMenu();
 					}
 					
@@ -155,9 +155,9 @@ public class Main {
 		 {
 			int userselected2 = 0;
 			
-			System.out.print(ayy);
+			logger.info(ayy);
 			String w1=scc.next();
-			System.out.print(ayy1);
+			logger.info(ayy1);
 			String w2=scc.next();
 			if(w.checkemail(w1)==1 && w.checkpass(w2)==1)
 			{
@@ -191,15 +191,15 @@ public class Main {
 					break;
 					
 				default : 
-            		System.out.print("Welcome ");
+					logger.info("Welcome ");
             		break;
 				}
 					
 			
 			 }
 			else {
-           	 System.out.println("Your USERNAME or PASSWORD is incorrect");
-           	 System.out.println("Please try again");
+				logger.info("Your USERNAME or PASSWORD is incorrect");
+				logger.info("Please try again");
            	 break;
            	 
             }
@@ -208,7 +208,7 @@ public class Main {
             
 			while(userselected2<5);
 			{
-				 System.out.println("");
+				logger.info("");
 				
 			}
              
@@ -216,9 +216,9 @@ public class Main {
 		 }
 	 if(userselected==3)
 	 {
-		 System.out.print("1- You have an account\n");
-		 System.out.println("2- Create account ");
-		 System.out.print("Your option is : ");
+		 logger.info("1- You have an account\n");
+		 logger.info("2- Create account ");
+		 logger.info("Your option is : ");
 		 int x=scc.nextInt();
 		
 			int userselected3 = 0;
@@ -230,9 +230,9 @@ public class Main {
 		String cc2; 
 			if(x==1) {
 				if(!flagaccount) {
-			System.out.print(ayy);
+					logger.info(ayy);
 			 cc1=scc.next();emails=cc1;
-			System.out.print(ayy1);
+			 logger.info(ayy1);
 			 cc2=scc.next();
 			flagaccount=true;
 			
@@ -246,8 +246,8 @@ public class Main {
 			switch(userselected3)
 			{
 			case 1 : 
-				 System.out.println("Option 1 is selected. Thank u ");
-				 System.out.println("Please Enter Information of your product");
+				logger.info("Option 1 is selected. Thank u ");
+				logger.info("Please Enter Information of your product");
 				
 				
 				
@@ -260,7 +260,7 @@ public class Main {
 				
 				
 				mm1.createProduct(g.toString(), mm1.type, nameofprod, mm1.description, mm1.specialtreatment,mm1.high,mm1.width);
-				System.out.println("Your product added to the system\n");
+				logger.info("Your product added to the system\n");
 				countprod++;countprod1++;
 				flagintitail=true;
 			
@@ -270,14 +270,14 @@ public class Main {
 			break;
 			case 2:
 				
-				System.out.println("Option 2 is selected. Thank u ");
+				logger.info("Option 2 is selected. Thank u ");
 				
-				System.out.print("Enter name of product you need to update : ");
+				logger.info("Enter name of product you need to update : ");
 				
 				String r= scc.next();
 				Integer in=f1(r);
 				
-				System.out.println("Please update Information of your product");
+				logger.info("Please update Information of your product");
 				
 				ProductMain mmm=scan();
 				height=Integer.parseInt(mmm.high);
@@ -285,7 +285,7 @@ public class Main {
 				nameofprod=mmm.name;
 				
 				mmm.updateProduct(in.toString(), mmm.type, mmm.name, mmm.description, mmm.specialtreatment,mmm.high,mmm.width);
-				System.out.println("Your product updating in the system");
+				logger.info("Your product updating in the system");
 				
 			
 				
@@ -305,19 +305,19 @@ public class Main {
 				for(int i=0;i<Customer.user1.size();i++) {
 					
 					if(Customer.user1.get(i).getEmail().equals(emails) ) {
-						System.out.println("* * * * * * * * * * * * * * * * * * * * * *");
-						System.out.println("*"+TT+TT+"SSN " + Customer.user1.get(i).id+	  TT+TT+"  *");
-						System.out.println("*"+TT+TT+"Name " + Customer.user1.get(i).name+	 TT+TT+"  *");
-						System.out.println("*"+TT+TT+"Phone " + Customer.user1.get(i).phone+	 TT+TT+"  *");
+						logger.info("* * * * * * * * * * * * * * * * * * * * * *");
+						logger.info("*"+TT+TT+"SSN " + Customer.user1.get(i).id+	  TT+TT+"  *");
+						logger.info("*"+TT+TT+"Name " + Customer.user1.get(i).name+	 TT+TT+"  *");
+						logger.info("*"+TT+TT+"Phone " + Customer.user1.get(i).phone+	 TT+TT+"  *");
 						Customer.user1.get(i);
-						System.out.println("*"+TT+TT+"addresss " + Customer.addresss+	 TT+TT+"  *");
-						System.out.println("*"+TT+TT+"Product " + nameofprod+	 TT+TT+"  *");
+						logger.info("*"+TT+TT+"addresss " + Customer.addresss+	 TT+TT+"  *");
+						logger.info("*"+TT+TT+"Product " + nameofprod+	 TT+TT+"  *");
 						Bill b=new Bill();
 						int billCus=b.priceProd(height,countprod);pr1=billCus;
-						System.out.println("*"+TT+TT+"Price " +billCus+"$"+	 TT+TT+"  *");
-						System.out.println("*"+TT+TT+"Delivary 20$" +		 TT+TT+"  *");
-						System.out.println("*"+TT+TT+"Total Price " +b.totalPriceofproduct(height,width,countprod)+"$"+ TT+TT+"  *");
-						System.out.println("* * * * * * * * * * * * * * * * * * * * * *");
+						logger.info("*"+TT+TT+"Price " +billCus+"$"+	 TT+TT+"  *");
+						logger.info("*"+TT+TT+"Delivary 20$" +		 TT+TT+"  *");
+						logger.info("*"+TT+TT+"Total Price " +b.totalPriceofproduct(height,width,countprod)+"$"+ TT+TT+"  *");
+						logger.info("* * * * * * * * * * * * * * * * * * * * * *");
 					}
 				}
 				
@@ -325,9 +325,9 @@ public class Main {
 				break;
 			case 5:
 				if(ProductMain.productInWaiting() || ProductMain.productInCleaning() || ProductMain.productCompleted())
-					 System.out.println("Product finished wait state and go to cleaning state");
+					logger.info("Product finished wait state and go to cleaning state");
 					else
-						System.out.println("State Product in Cleaning ");
+						logger.info("State Product in Cleaning ");
 					break;
 			case 6:
 				int o1=0;
@@ -338,14 +338,14 @@ public class Main {
 					if(!emails.equals("ayamoinn@gmail.com")){
 					o1=c.discountInPrice10(pr1,5);
 					
-					System.out.println(diss+pr1);
-					System.out.println("Price after Discoaunt : "+o1);}
+					logger.info(diss+pr1);
+					logger.info("Price after Discoaunt : "+o1);}
 					
 				}
 				if(pr1>600) {
 					o1=c.discountInPrice10(pr1,10);
-					System.out.println(diss+pr1);
-					System.out.println("Price after Discount : "+o1);
+					logger.info(diss+pr1);
+					logger.info("Price after Discount : "+o1);
 				}
 				if(countprod>6) {
 				      o1=c.discountInNumber(countprod);
@@ -353,12 +353,12 @@ public class Main {
 				      
 				      
 				      int y=o1*pr1;
-				      System.out.println(diss+pr1);
-					  System.out.println("Price after Discount : "+y);
+				      logger.info(diss+pr1);
+				      logger.info("Price after Discount : "+y);
 				}
 				break;
 			default : 
-        		System.out.print("Hello");
+				logger.info("Hello");
         		break;
 				}
 			
@@ -427,16 +427,16 @@ public class Main {
 		int selection ;
 		 Scanner sc = new Scanner(System.in);
 		  	
-		    System.out.println("          Admin");
-			System.out.println(STR+" ★");
-			System.out.println("★"+S1+"1-"+S1+"Show customer"+TT+"★");		
-			System.out.println("★"+S1+"2-"+S1+"Show Product "+TT+"★");     
-			System.out.println("★"+S1+"3-"+S1+"Show worker "+TT+TT+"★");
-			System.out.println("★"+S1+"4-"+S1+"Delete Customer"+TT+"★");
-			System.out.println("★"+S1+"5-"+S1+"Delete Product"+TT+"★");
-			System.out.println("★"+S1+"6-"+S1+"report"+TT+TT+"★");
-			System.out.println(STR+" ★");
-			System.out.print(OPT);
+		 logger.info("          Admin");
+		 logger.info(STR+" ★");
+		 logger.info("★"+S1+"1-"+S1+"Show customer"+TT+"★");		
+		 logger.info("★"+S1+"2-"+S1+"Show Product "+TT+"★");     
+		 logger.info("★"+S1+"3-"+S1+"Show worker "+TT+TT+"★");
+		 logger.info("★"+S1+"4-"+S1+"Delete Customer"+TT+"★");
+		 logger.info("★"+S1+"5-"+S1+"Delete Product"+TT+"★");
+		 logger.info("★"+S1+"6-"+S1+"report"+TT+TT+"★");
+		 logger.info(STR+" ★");
+		 logger.info(OPT);
 			selection=sc.nextInt();
 
 	return selection;
@@ -450,16 +450,16 @@ public class Main {
 		 Scanner sc = new Scanner(System.in);
 		
 
-		    System.out.println("            Customer");
-		    System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-			System.out.println("★"+S1+"1-"+S1+"Add Product"+TT+TT+"★");
-			System.out.println("★"+S1+"2-"+S1+"Updtate Product"+TT+"★");
-			System.out.println("★"+S1+"3-"+S1+"Delete Product"+TT+"★");
-			System.out.println("★"+S1+"4- "+S1+"get bill"+TT+TT+"★");
-			System.out.println("★"+S1+"5-"+S1+"get Order Status"+TT+"★");
-			System.out.println("★"+S1+"6-"+S1+"discount"+TT+TT+"★");
-			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-			System.out.print(OPT);
+		 logger.info("            Customer");
+		 logger.info("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+		 logger.info("★"+S1+"1-"+S1+"Add Product"+TT+TT+"★");
+		 logger.info("★"+S1+"2-"+S1+"Updtate Product"+TT+"★");
+		 logger.info("★"+S1+"3-"+S1+"Delete Product"+TT+"★");
+		 logger.info("★"+S1+"4- "+S1+"get bill"+TT+TT+"★");
+		 logger.info("★"+S1+"5-"+S1+"get Order Status"+TT+"★");
+		 logger.info("★"+S1+"6-"+S1+"discount"+TT+TT+"★");
+		 logger.info("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+		 logger.info(OPT);
 			
 
 			selection=sc.nextInt();
@@ -478,21 +478,21 @@ public class Main {
 		 Scanner sc = new Scanner(System.in);
 		 
 
-		    System.out.println("          Worker");
-			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-			System.out.println("★    1- Show Products     ★");
-			System.out.println("★    2- Show Worker Team     ★");
-			System.out.println("★    3- Show Worker Time      ★");
-			System.out.println("★    4- Main Menu      ★");
+		 logger.info("          Worker");
+		 logger.info("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+		 logger.info("★    1- Show Products     ★");
+		 logger.info("★    2- Show Worker Team     ★");
+		 logger.info("★    3- Show Worker Time      ★");
+		 logger.info("★    4- Main Menu      ★");
 
 
-			System.out.println("★              ★");
+		 logger.info("★              ★");
 			
-			System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-			System.out.println(OPT);
+		 logger.info("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+		 logger.info(OPT);
 
 			selection=sc.nextInt();
-			System.out.println("Your selected option is: ");
+			logger.info("Your selected option is: ");
 
 			
 		 return selection;
@@ -507,14 +507,14 @@ public class Main {
 		int selection ;
 		 Scanner sc = new Scanner(System.in);
 		 
-		System.out.println("       Welcome");
-		System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-		System.out.println("★  Select your option      ★");
-		System.out.println("★  1- Create customer      ★");
-		System.out.println("★  2- add customer         ★");
-		System.out.println("★  3- delete customer      ★");
-		System.out.println("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
-		System.out.println("Your selected option is: ");
+		 logger.info("       Welcome");
+		 logger.info("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+		 logger.info("★  Select your option      ★");
+		 logger.info("★  1- Create customer      ★");
+		 logger.info("★  2- add customer         ★");
+		 logger.info("★  3- delete customer      ★");
+		 logger.info("  ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+		 logger.info("Your selected option is: ");
 
 		selection=sc.nextInt();
 	return selection;
@@ -522,26 +522,26 @@ public class Main {
 	public static ProductMain scan()
 	{
 		Scanner scan = new Scanner(System.in);
-		 System.out.print("Enter name of product ");
+		logger.info("Enter name of product ");
 		 
 		 ProductMain tt = new ProductMain() ;
 	     tt.name = scan.next();
 	     
 	     
-	System.out.print("Enter type of his product ");
+	     logger.info("Enter type of his product ");
 
 		tt.type = scan.next();
 		
-		System.out.print("The size of product highet and width : ");
+		logger.info("The size of product highet and width : ");
 		
 		tt.high=scan.next();
 		tt.width=scan.next();
 		
-		System.out.print("Enter description ");
+		logger.info("Enter description ");
 		tt.description=scan.next();
-		System.out.print("Enter image of product ");
+		logger.info("Enter image of product ");
 		tt.image=scan.next();
-		System.out.print("If you need a special treatment ");
+		logger.info("If you need a special treatment ");
 		tt.specialtreatment=scan.next();
 		
 		
@@ -564,16 +564,16 @@ public class Main {
 	public static String createaccountcus() {
 		Customer ff=new Customer();
 		Scanner n=new Scanner(System.in);
-		System.out.println("Welcome\nYou now in create account page\nEnter your information");
-		System.out.print("SSN : ");ff.id=n.next();
-		System.out.print("Name : ");ff.name=n.next();
-		System.out.print("Adderess : ");Customer.addresss=n.next();
-		System.out.print("Phone : ");ff.phone=n.next();
+		logger.info("Welcome\nYou now in create account page\nEnter your information");
+		logger.info("SSN : ");ff.id=n.next();
+		logger.info("Name : ");ff.name=n.next();
+		logger.info("Adderess : ");Customer.addresss=n.next();
+		logger.info("Phone : ");ff.phone=n.next();
 		
-		System.out.print("Email : ");String hh=n.next();
+		logger.info("Email : ");String hh=n.next();
 		ff.setEmail(hh);
-		System.out.print("Password : ");ff.setPassword(n.next());
-		System.out.print("Confirm password : ");
+		logger.info("Password : ");ff.setPassword(n.next());
+		logger.info("Confirm password : ");
 		if (!Customer.pass.contains(ff.getPassword()))
 			Customer.pass.add(ff.getPassword());
 			if (!Customer.email.contains(hh))

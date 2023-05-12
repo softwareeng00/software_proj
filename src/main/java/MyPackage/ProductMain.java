@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class ProductMain {
 	  String id;
@@ -12,6 +13,7 @@ public class ProductMain {
 	 static boolean inwait=false;
 	 static boolean incleaning=false;
 	 static boolean completed=false;
+	 private static final Logger logger = Logger.getLogger(Main.class.getName());
 	 String name;
 	 String image;
 	 String description;
@@ -78,7 +80,7 @@ public class ProductMain {
 	public static void printProduct() {
 		for(int i=0;i<ProductMain.prod.size();i++)
 		{
-			System.out.println("Product : "+ProductMain.prod.get(i).id+" "+ProductMain.prod.get(i).name+" "+ProductMain.prod.get(i).type+" "+
+			logger.info("Product : "+ProductMain.prod.get(i).id+" "+ProductMain.prod.get(i).name+" "+ProductMain.prod.get(i).type+" "+
 					ProductMain.prod.get(i).description+" " +ProductMain.prod.get(i).high+" "+ProductMain.prod.get(i).width);
 		}
 		
@@ -206,6 +208,7 @@ public class ProductMain {
 	public static int numberprodeq() {
 	
 	
+		
 		
 		
 		return (int) (120 - 2*Math.random());

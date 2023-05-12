@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 
 public class Customer {
-	int ay;
+	 private static final Logger logger = Logger.getLogger(Main.class.getName());
 	private String  customerN;
 	private String customerPhone;
 	private String customerAddress;
@@ -28,6 +28,7 @@ public class Customer {
 	 static List<String> phone1 =new ArrayList<>() ;
 
     String phone;
+   
 	private String emaill;
 	private String password;
 	 int reguser=0;
@@ -81,7 +82,7 @@ public class Customer {
 		{
 			
 			Customer.user1.get(i);
-			Logger.getLogger("Customer : "+Customer.user1.get(i).id+" "+Customer.user1.get(i).name+" "+Customer.addresss+" "+
+			logger.info("Customer : "+Customer.user1.get(i).id+" "+Customer.user1.get(i).name+" "+Customer.addresss+" "+
 					Customer.user1.get(i).phone);
 			
 		}
