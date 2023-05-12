@@ -22,10 +22,6 @@ public class OrderDistributor {
         	
       
             ordersAssigned++;
-            if (ordersAssigned % avg == 0) {
-                currentWorkerIndex++;
-          
             
-        }
     }
 }

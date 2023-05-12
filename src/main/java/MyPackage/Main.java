@@ -29,7 +29,7 @@ public class Main {
 		boolean flagadmin=false;
 		String nameofprod=null;
 		int height=1;
-		
+		String ayam;
 		int countprod=0;
 		int countprod1=0;
 		boolean flagworker=false;
@@ -97,21 +97,26 @@ public class Main {
                 	if(countprod1==0)
                 		countprod1=1;
                 	
-                	String ayam="  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *";
+                	 ayam="  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *";
                 	logger.fine(ayam);
                 	ayam="* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
        			         + "* powders and materials to deal with all kinds of stains and dirt                    *";
                 	logger.fine(ayam);
                 	int y=ProductMain.numberprodag();
                 	ayam="* Number of cleaning agent in the system :"+y+"                                        *";
-                	logger.info(ayam);
-                	logger.fine("* The number of missing cleaning agent must be provided :"+ (500-y)+"                           *");
+                	logger.fine(ayam);
+                	ayam="* The number of missing cleaning agent must be provided :"+ (500-y)+"                           *";
+                	logger.fine(ayam);
                 	int z=ProductMain.numberprodeq();
-                	logger.fine("* The number of cleaning equipment :"+z+"                                              *");
-                	logger.fine("* The number of cleaning equipment that needs maintenance :"+(120-z)+"                         *");
+                	ayam="* The number of cleaning equipment :"+z+"                                              *";
+                	logger.fine(ayam);
+                	ayam="* The number of cleaning equipment that needs maintenance :"+(120-z)+"                         *";
+                	logger.fine(ayam);
                 	int l=ProductMain.proderror();
-                	logger.fine("* Carpet cleaning percentage  : "+(l) +"%                                                  *");
-                	logger.fine("* Carpet cleaning percentage error: "+( 100 -l) +"%                                              *");
+                	ayam="* Carpet cleaning percentage  : "+(l) +"%                                                  *";
+                	logger.fine(ayam);
+                	ayam="* Carpet cleaning percentage error: "+( 100 -l) +"%                                              *";
+                	logger.fine(ayam);
                 	logger.fine("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
 					break;
                 case 7:
@@ -308,17 +313,25 @@ public class Main {
 					
 					if(Customer.user1.get(i).getEmail().equals(emails) ) {
 						logger.info("* * * * * * * * * * * * * * * * * * * * * *");
-						logger.info("*"+TT+TT+"SSN " + Customer.user1.get(i).id+	  TT+TT+"  *");
-						logger.info("*"+TT+TT+"Name " + Customer.user1.get(i).name+	 TT+TT+"  *");
-						logger.info("*"+TT+TT+"Phone " + Customer.user1.get(i).phone+	 TT+TT+"  *");
+						ayam="*"+TT+TT+"SSN " + Customer.user1.get(i).id+	  TT+TT+"  *";
+						logger.info(ayam);
+						ayam="*"+TT+TT+"Name " + Customer.user1.get(i).name+	 TT+TT+"  *";
+						logger.info(ayam);
+						ayam="*"+TT+TT+"Phone " + Customer.user1.get(i).phone+	 TT+TT+"  *";
+						logger.info(ayam);
 						Customer.user1.get(i);
-						logger.info("*"+TT+TT+"addresss " + Customer.addresss+	 TT+TT+"  *");
-						logger.info("*"+TT+TT+"Product " + nameofprod+	 TT+TT+"  *");
+						ayam="*"+TT+TT+"addresss " + Customer.addresss+	 TT+TT+"  *";
+						logger.info(ayam);
+						ayam="*"+TT+TT+"Product " + nameofprod+	 TT+TT+"  *";
+						logger.info(ayam);
 						Bill b=new Bill();
 						int billCus=b.priceProd(height,countprod);pr1=billCus;
-						logger.info("*"+TT+TT+"Price " +billCus+"$"+	 TT+TT+"  *");
-						logger.info("*"+TT+TT+"Delivary 20$" +		 TT+TT+"  *");
-						logger.info("*"+TT+TT+"Total Price " +b.totalPriceofproduct(height,countprod)+"$"+ TT+TT+"  *");
+						ayam="*"+TT+TT+"Price " +billCus+"$"+	 TT+TT+"  *";
+						logger.info(ayam);
+						ayam="*"+TT+TT+"Delivary 20$" +		 TT+TT+"  *";
+						logger.info(ayam);
+						ayam="*"+TT+TT+"Total Price " +b.totalPriceofproduct(height,countprod)+"$"+ TT+TT+"  *";
+						logger.info(ayam);
 						logger.info("* * * * * * * * * * * * * * * * * * * * * *");
 					}
 				}
@@ -339,15 +352,18 @@ public class Main {
 					flagintitail=false;
 					if(!emails.equals("ayamoinn@gmail.com")){
 					o1=c.discountInPrice10(pr1,5);
-					
-					logger.info(diss+pr1);
-					logger.info("Price after Discoaunt : "+o1);}
+					ayam=diss+pr1;
+					logger.info(ayam);
+					ayam="Price after Discoaunt : "+o1;
+					logger.info(ayam);}
 					
 				}
 				if(pr1>600) {
 					o1=c.discountInPrice10(pr1,10);
-					logger.info(diss+pr1);
-					logger.info("Price after Discount : "+o1);
+					ayam=diss+pr1;
+					logger.info(ayam);
+					ayam="Price after Discount : "+o1;
+					logger.info(ayam);
 				}
 				if(countprod>6) {
 				      o1=c.discountInNumber(countprod);
@@ -355,8 +371,10 @@ public class Main {
 				      
 				      
 				      int y=o1*pr1;
-				      logger.info(diss+pr1);
-				      logger.info("Price after Discount : "+y);
+				      ayam=diss+pr1;
+				      logger.info(ayam);
+				      ayam="Price after Discount : "+y;
+				      logger.info(ayam);
 				}
 				break;
 			default : 

@@ -73,7 +73,7 @@ public class ProductMain {
 		{
 			if(prod.get(i).id.equals(id)) {
 				prod.remove(i);
-				i--;
+				
 			}
 			    
 			
@@ -83,8 +83,9 @@ public class ProductMain {
 	public static void printProduct() {
 		for(int i=0;i<ProductMain.prod.size();i++)
 		{
-			logger.info("Product : "+ProductMain.prod.get(i).id+" "+ProductMain.prod.get(i).name+" "+ProductMain.prod.get(i).type+" "+
-					ProductMain.prod.get(i).description+" " +ProductMain.prod.get(i).high+" "+ProductMain.prod.get(i).width);
+			String ayya="Product : "+ProductMain.prod.get(i).id+" "+ProductMain.prod.get(i).name+" "+ProductMain.prod.get(i).type+" "+
+					ProductMain.prod.get(i).description+" " +ProductMain.prod.get(i).high+" "+ProductMain.prod.get(i).width;
+			logger.info(ayya);
 		}
 		
 	}
