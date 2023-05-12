@@ -71,7 +71,9 @@ public class ProductMain {
 		
 		for(int i=0;i<prod.size();i++)
 		{
-			if(prod.get(i).id.equals(id)) {
+			if(prod.get(i).isEmpty())
+				break;
+			else if(prod.get(i).id.equals(id)) {
 				prod.remove(i);
 				
 			}
@@ -79,6 +81,13 @@ public class ProductMain {
 			
 		}
 	
+	}
+	private boolean isEmpty() {
+		
+		if(prod.size()==0)
+		return false;
+		else
+			return true;
 	}
 	public static void printProduct() {
 		for(int i=0;i<ProductMain.prod.size();i++)
