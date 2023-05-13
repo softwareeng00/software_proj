@@ -24,7 +24,11 @@ public class Customm {
 	@Given("the user is login with the email {string}")
 	public void the_user_is_login_with_the_email(String string) {
 	   
-		
+		Customer.printCustomer();
+		c=new Customer();
+		c.getCustomerName();
+		c.getCustomerAge();
+		c.getCustomerAddress();
 		if(user.checkemail(string)==1 )
     	{
     	LoginStep.flag=true;
@@ -119,6 +123,7 @@ else
 		
 	}
 
+	
 	@Given("Update Customer with CustomerName {string},CustomerPhoneNumber {string},CustomerAddress {string},CustomerAge {string}")
 	public void update_customer_with_customer_name_customer_phone_number_customer_address_customer_age(String string, String string2, String string3, String string4) {
 	   
