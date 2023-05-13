@@ -5,25 +5,35 @@ import java.util.List;
 import java.util.logging.Logger;
 
 
+
 public class Worker {
-	private static final Logger logger = Logger.getLogger(Worker.class.getName());
-	int ay;
-	int id;
-	private String name;
 	
-	private int phone;
-	private String adder;
-	private String password;
+	int id;
+	static String name;
+	 static String address;
+	 static String date;
+	 private static final Logger logger = Logger.getLogger(Worker.class.getName());
+
+	private static int phone;
+	private static String adder;
+	private static String password;
 	static int isWorker=0;
 	
 	 static List<Worker> workerList =new ArrayList<>();
 	
 	 static List<String> emailWorker =new ArrayList<>() ;
 	 static List<String> passWorker =new ArrayList<>() ;
-	
 	 
+	 public Worker() {
+			Worker.name="ahmed";
+			Worker.address="Nablus";
+			Worker.phone=11;
+			Worker.date="ss";
+			emailWorker.add("awawd");
+			passWorker.add("123");
+		}
 	
-	public void creatWorker(String name,String address,int phone,String email,String password )
+	public void creatWorker(String name,String address,int phone,String date,String email,String password )
 	{
 	this.setName(name);
 	this.setAdder(address);
@@ -48,20 +58,20 @@ public class Worker {
 	
 	
 	
-	public Worker() {
-		this.name="aya";
-	}
+	
 
-	public void setEmail(String email) {
+	public void setEmail(String email)
+	{
 	
 		if (!emailWorker.contains(email))
 			 emailWorker.add(email);
 	}
-	public String getPassword() {
+	public static String getPassword()
+	{
 		return password;
 	}
 	public void setPassword(String password) {
-		this.password = password;
+		Worker.password = password;
 		if (!passWorker.contains(password))
 			passWorker.add(password);
 	}
@@ -123,26 +133,26 @@ public class Worker {
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		Worker.name = name;
 	}
 
 	
 
 
-	public int getPhone() {
+	public static int getPhone() {
 		return phone;
 	}
 
 	public void setPhone(int phone) {
-		this.phone = phone;
+		Worker.phone = phone;
 	}
 
-	public String getAdder() {
+	public static String getAdder() {
 		return adder;
 	}
 
 	public void setAdder(String adder) {
-		this.adder = adder;
+		Worker.adder = adder;
 	}
 
 	
