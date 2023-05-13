@@ -3,16 +3,17 @@ package mypackage;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 
 
 public class Customer {
 	
-	private static String  customerN;
+	private  String  customerN;
 	private String customerPhone;
-	private static String customerAddress;
-	private static	String customerAge;
-
+	private  String customerAddress;
+	private 	String customerAge;
+	private static final Logger logger = Logger.getLogger(Worker.class.getName());
 	 static List<Customer> customerData =new ArrayList<>();
 
 	
@@ -35,9 +36,9 @@ public class Customer {
 	{
 		this.id="11";
 		this.name="aya";
-		this.addresss="Nablus";
+		Customer.addresss="Nablus";
 		this.emaill=aya;
-		this.password=aya1;
+		
 		phone1.add("0687347273");
 		this.phone="0687347273";
 		user1.add(this);
@@ -80,7 +81,7 @@ public class Customer {
 			Customer.user1.get(i);
 			String j="Customer : "+Customer.user1.get(i).id+" "+Customer.user1.get(i).name+" "+Customer.addresss+" "+
 					Customer.user1.get(i).phone;
-			System.out.println(j);
+			logger.info(j);
 		}
 		
 	}
@@ -173,8 +174,13 @@ public class Customer {
 		
 		for(int i=0;i<customerData.size();i++)
 		{
-			if(customerData.get(i).getCustomerPhoneNumber().equals(ph1))
+			if(customerData.isEmpty())
+				break;
+			else if(customerData.get(i).getCustomerPhoneNumber().equals(ph1)) {
 				customerData.remove(i);
+				
+			}
+			
 			
 		}
 		}
