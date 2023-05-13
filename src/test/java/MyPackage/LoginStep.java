@@ -26,6 +26,8 @@ public class LoginStep {
 		U=u;
 		W=w;
 		A=a;
+		a.getEmail();
+		a.getPassword();
 	}
 	
 	@Given("that the user is not logged in")

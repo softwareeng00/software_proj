@@ -29,7 +29,8 @@ public class BillCus {
 		p=new ProductMain();
 		c=new Customer();
 		b=new Bill();
-		
+		b.getPrice();
+		b.getTotalPrice();
 	}
 	
 	@Given("Product with id {string} cleaning has been completed")
@@ -67,7 +68,7 @@ public class BillCus {
 	
 		int con=Integer.parseInt(countprod);
 		int heig=Integer.parseInt(height);
-		int widt=Integer.parseInt(width);
+		
 		
 		if(flagbill && Product.flagcreateprod ) {
 			priceproduct=b.priceProd(heig,con);
