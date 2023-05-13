@@ -118,6 +118,12 @@ public void creating_product_succes_flagproduct(String string) {
 
 	@Given("the user created product succesflully")
 	public void the_user_created_product_succesflully() {
+		ProductMain m=new ProductMain();
+		ProductMain.printProduct();
+		ProductMain.proderror();
+		ProductMain.numberprodag();
+		ProductMain.numberprodeq();
+		ProductMain.delivary();
 	    
 		if(flagcreateprod) {
 			flagadd=true;
