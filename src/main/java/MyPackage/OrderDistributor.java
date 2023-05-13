@@ -1,22 +1,29 @@
 package mypackage;
 
-import java.util.List;
 
 public class OrderDistributor {
-    private List<Worker> workers;
+     String workers;
     
-    int ay;
-    public OrderDistributor(List<Worker> workerss) {
-        this.workers = workerss;
+
+    public OrderDistributor() {
+        this.workers = "ahmed";
         
     }
 
-    
-    public int distributeOrders(List<ProductMain> orders) {
-        int totalOrders = orders.size();
-        int numWorkers = workers.size();
-       
+   
 
-        return totalOrders / numWorkers;
+	public int distributeOrders(String aorders) {
+        int totalOrders = 200;
+        int numWorkers = 12;
+        int avg = totalOrders / numWorkers;
+
+        int currentWorkerIndex=0;
+        int ordersAssigned = 0;
+     
+   
+            ordersAssigned++;
+            return (ordersAssigned % avg == 0) ? currentWorkerIndex++:currentWorkerIndex;
+           
+        }
+	
     }
-}
