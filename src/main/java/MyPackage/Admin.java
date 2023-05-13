@@ -12,14 +12,14 @@ public class Admin {
 	String address;
 		int phone;
 	Date birthdate;
-	private String email;
-	private String password;
+	 String email;
+	 String password;
 	 static List<String> emailAdmin =new ArrayList<>() ;
 	 static List<String> passAdmin =new ArrayList<>() ;
 	
 	public String getEmail() {
 		
-		return this.email;
+		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
