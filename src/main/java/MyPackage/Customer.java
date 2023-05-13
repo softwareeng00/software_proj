@@ -13,7 +13,7 @@ public class Customer {
 	private String customerPhone;
 	private  String customerAddress;
 	private 	String customerAge;
-	private static final Logger logger = Logger.getLogger(Worker.class.getName());
+	private static final Logger logger = Logger.getLogger(Customer.class.getName());
 	 static List<Customer> customerData =new ArrayList<>();
 
 	
@@ -36,7 +36,7 @@ public class Customer {
 	{
 		this.id="11";
 		this.name="aya";
-		Customer.addresss="Nablus";
+		this.setCustomerAddress("Nablus");
 		this.emaill=aya;
 		
 		phone1.add("0687347273");
