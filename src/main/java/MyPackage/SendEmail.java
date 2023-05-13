@@ -15,7 +15,7 @@ public class SendEmail {
 	
 	 static List<String> pass1 =new ArrayList<>();
 	 
-	 public SendEmail() {
+	 private SendEmail() {
 		 pass1.add("mpghtrdzmlbexhvg");
 		}
 	   public static void sendemail(String recepient,String random) throws MessagingException{
