@@ -1,19 +1,17 @@
 package mypackage;
 
 
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 
 
 public class Customer {
-	 private static final Logger logger = Logger.getLogger(Customer.class.getName());
-	private String  customerN;
+	
+	private static String  customerN;
 	private String customerPhone;
-	private String customerAddress;
-	private	String customerAge;
+	private static String customerAddress;
+	private static	String customerAge;
 
 	 static List<Customer> customerData =new ArrayList<>();
 
@@ -28,20 +26,18 @@ public class Customer {
 	 static List<String> phone1 =new ArrayList<>() ;
 
     String phone;
-   
 	private String emaill;
 	private String password;
 	 int reguser=0;
 	 private String  aya="ayamoinn@gmail.com";
 	 private String  aya1="useruser";
-	 
 	public Customer()
 	{
 		this.id="11";
 		this.name="aya";
-		
+		this.addresss="Nablus";
 		this.emaill=aya;
-		
+		this.password=aya1;
 		phone1.add("0687347273");
 		this.phone="0687347273";
 		user1.add(this);
@@ -77,17 +73,14 @@ public class Customer {
 		return 0;
 	
 		
-		
 	}
 	public static void printCustomer() {
 		for(int i=0;i<Customer.user1.size();i++)
 		{
-			
 			Customer.user1.get(i);
 			String j="Customer : "+Customer.user1.get(i).id+" "+Customer.user1.get(i).name+" "+Customer.addresss+" "+
 					Customer.user1.get(i).phone;
-			logger.info(j);
-			
+			System.out.println(j);
 		}
 		
 	}
@@ -115,7 +108,7 @@ public class Customer {
 		
 	}
 	
-	public String getCustomerName() {
+	public  String getCustomerName() {
 		return customerN;
 	}
 
@@ -131,7 +124,7 @@ public class Customer {
 		customerPhone = customerPhoneNumber;
 	}
 
-	public String getCustomerAddress() {
+	public  String getCustomerAddress() {
 		return customerAddress;
 	}
 
@@ -139,7 +132,7 @@ public class Customer {
 		customerAddress = s;
 	}
 
-	public String getCustomerAge() {
+	public  String getCustomerAge() {
 		return customerAge;
 	}
 
@@ -178,13 +171,11 @@ public class Customer {
 	public void deleteCustomer(String ph1)
 	{
 		
-		
 		for(int i=0;i<customerData.size();i++)
 		{
-			if(customerData.isEmpty())
-				break;
-			else if(customerData.get(i).getCustomerPhoneNumber().equals(ph1))
-				customerData.remove(i); 	 		
+			if(customerData.get(i).getCustomerPhoneNumber().equals(ph1))
+				customerData.remove(i);
+			
 		}
 		}
 }
