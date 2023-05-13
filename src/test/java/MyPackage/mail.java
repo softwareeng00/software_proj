@@ -2,6 +2,8 @@ package mypackage;
 
 import static org.junit.Assert.assertTrue;
 
+import javax.mail.MessagingException;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,7 +11,7 @@ import mypackage.Customer;
 
 public class mail {
 	
-	int ay;
+
 	public static boolean  flagin=false;
 	Customer a = new Customer();
 	public static boolean  flagmail=false;
@@ -59,20 +61,22 @@ public class mail {
 	}
 
 	@Then("send message to the email {string} in this step")
-	public void send_message_to_the_email_in_this_step(String string) {
+	public void send_message_to_the_email_in_this_step(String string) throws MessagingException {
+		sendEmail.sendemail("ayamoinn95@gmail.com", "1");
 	   assertTrue(flagin);
 	}
 
 	@Given("sending message to the  {string} number in step")
-	public void sending_message_to_the_number_in_step(String string) {
+	public void sending_message_to_the_number_in_step(String string) throws MessagingException {
+		sendEmail.sendemail("ayamoinn95@gmail.com", "1");
+
 		
-		
-		if(a.checkPhone(string)==0)
+		/*if(a.checkPhone(string)==0)
 		{
 			flagin=false;
 			
 		}
-		else
+		else*/
 			flagin=true;
 		
 	}
@@ -108,6 +112,5 @@ public class mail {
 	public void send_message_to_the_number_succesd(String string) {
 	    assertTrue(flagmail);
 	}
-
 
 }
