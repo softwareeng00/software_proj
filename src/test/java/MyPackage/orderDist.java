@@ -13,7 +13,7 @@ public class orderDist {
 @Given("the project has many money resources order {string}")
 public void the_project_has_many_money_resources_order(String string) {
 	OrderDistributor a=new OrderDistributor();
-	a.distributeOrders(string);
+	a.distributeOrders();
 	flagorder=true;
 }
 
