@@ -56,7 +56,7 @@ public class SendEmail {
 	      msg.setRecipients(Message.RecipientType.TO, 
 	                        InternetAddress.parse( recepient ,false));
 	      msg.setSubject("Wellcome Cleaning System");
-	      String ayya="		            		";
+	       String ayya="\t"+"\t"+"\t"+"\t"+"\t"+"\t";
 	      msg.setText("Dear user , \\n your order is ready, please pick it up from the company's delivery service .\"\r\n"
 	      		+ayya+ "\\n Please contact the owner of this number: 0599516693 in case the delivery is delayed or there is an error in the order.\"\r\n"
 	      		+ ayya+ " \\n Thank you for dealing with our company for cleaning fabrics.:\n"+random
