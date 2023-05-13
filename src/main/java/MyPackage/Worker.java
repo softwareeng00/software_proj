@@ -2,6 +2,7 @@ package mypackage;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 
 
@@ -19,7 +20,7 @@ public class Worker {
 	 int isWorker=0;
 	
 	 static List<Worker> workerList =new ArrayList<>();
-	
+	 private static final Logger logger = Logger.getLogger(Worker.class.getName());
 	 static List<String> emailWorker =new ArrayList<>() ;
 	 static List<String> passWorker =new ArrayList<>() ;
 	 
@@ -98,7 +99,7 @@ public class Worker {
 	}
 	
 	public static void printWorker() {
-		System.out.println("Name         " +"emmaill    \n"+
+		logger.info("Name         " +"emmaill    \n"+
 				           "Aya Moin     " +"ayamoinn44@gmail.com\n"+
 				           "Mohmed samer " +"mohmd55t44@gmail.com\n"+
 				           "jad mohmd    " +"jadmohmd33@gmail.com\n");
@@ -106,7 +107,7 @@ public class Worker {
 	
 	public static void workerName()
 	{
-		System.out.println("Name" +
+		logger.info("Name" +
 		           "Aya Moin\n"+
 		           "Mohmed samer\n"+
 		           "jad mohmd\n\n");
@@ -114,16 +115,16 @@ public class Worker {
 	
 	
 	public static void prodinclean() {
-		System.out.println("Name         " +"    Number    \n"+
+		logger.info("Name         " +"    Number    \n"+
 		           "Canves1     " +"      1\n"+
 		           "Canves + Cover " +"   2\n"+
 		           "Cover    " +"         3\n");
 	}
 	public static void breakTime()
 	{
-		System.out.println("\n Your Work Start at 8:30  to 4:00");
+		logger.info("\n Your Work Start at 8:30  to 4:00");
 
-		System.out.println("\n Your break at 11:00 to 11:30 / break at 2:00 to 2:40");
+		logger.info("\n Your break at 11:00 to 11:30 / break at 2:00 to 2:40");
 	}
 	
 
