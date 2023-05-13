@@ -9,7 +9,7 @@ public class availableWorker {
 	public static boolean flagworker=false;
 
 	
-	
+
 	
 	
 
@@ -20,15 +20,16 @@ public void the_workerdoesnt_has_any_prduct_to_clean() {
 }
 @Given("Worker enter here information  Workername {string},WorkerAddress {string},WorkerPhoneNumber {int}, Workerdate {string}, Workeremail {string} , Workerpass {string}")
 public void worker_enter_here_information_workername_worker_address_worker_phone_number_workerdate_workeremail_workerpass(String string, String string2, Integer int1, String string3, String string4, String string5) {
+	Worker w=new Worker();
 	Worker.printWorker();
 	Worker.workerName();
 	Worker.prodinclean();
-	Worker.getPassword();
-	Worker W=new Worker();
-	Worker.getPhone();
-	Worker.getAdder();
+	w.getPassword();
 	
-	W.creatWorker(string, string2, int1,string4,string5);
+	w.getPhone();
+	w.getAdder();
+	
+	w.creatWorker(string, string2, int1,string4,string5);
 	flagworker=true;
 }
 
