@@ -98,26 +98,26 @@ public class Main {
                 		countprod1=1;
                 	
                 	 ayam="  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *";
-                	logger.fine(ayam);
+                	logger.info(ayam);
                 	ayam="* Carpet washing with the latest equipment and using special cleaning materials,     *\n"
        			         + "* powders and materials to deal with all kinds of stains and dirt                    *";
-                	logger.fine(ayam);
+                	logger.info(ayam);
                 	int y=ProductMain.numberprodag();
                 	ayam="* Number of cleaning agent in the system :"+y+"                                        *";
-                	logger.fine(ayam);
+                	logger.info(ayam);
                 	ayam="* The number of missing cleaning agent must be provided :"+ (500-y)+"                           *";
-                	logger.fine(ayam);
+                	logger.info(ayam);
                 	int z=ProductMain.numberprodeq();
                 	ayam="* The number of cleaning equipment :"+z+"                                              *";
-                	logger.fine(ayam);
+                	logger.info(ayam);
                 	ayam="* The number of cleaning equipment that needs maintenance :"+(120-z)+"                         *";
-                	logger.fine(ayam);
+                	logger.info(ayam);
                 	int l=ProductMain.proderror();
                 	ayam="* Carpet cleaning percentage  : "+(l) +"%                                                  *";
-                	logger.fine(ayam);
+                	logger.info(ayam);
                 	ayam="* Carpet cleaning percentage error: "+( 100 -l) +"%                                              *";
-                	logger.fine(ayam);
-                	logger.fine("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+                	logger.info(ayam);
+                	logger.info("  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
 					break;
                 case 7:
                 	
