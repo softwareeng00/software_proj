@@ -178,19 +178,13 @@ public class Customer {
 	public void deleteCustomer(String ph1)
 	{
 		
+		
 		for(int i=0;i<customerData.size();i++)
 		{
-			if(customerData.get(i).isEmpty())
+			if(customerData.isEmpty())
 				break;
 			else if(customerData.get(i).getCustomerPhoneNumber().equals(ph1))
 				customerData.remove(i); 	 		
 		}
 		}
-private boolean isEmpty() {
-		
-		if(customerData.size()==0)
-			return false;
-		else
-			return true;
-	}
 }
