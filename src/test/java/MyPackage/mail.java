@@ -62,13 +62,13 @@ public class mail {
 
 	@Then("send message to the email {string} in this step")
 	public void send_message_to_the_email_in_this_step(String string) throws MessagingException {
-		sendEmail.sendemail("ayamoinn95@gmail.com", "1");
+		SendEmail.sendemail("ayamoinn95@gmail.com", "1");
 	   assertTrue(flagin);
 	}
 
 	@Given("sending message to the  {string} number in step")
 	public void sending_message_to_the_number_in_step(String string) throws MessagingException {
-		sendEmail.sendemail("ayamoinn95@gmail.com", "1");
+		SendEmail.sendemail("ayamoinn95@gmail.com", "1");
 
 		
 		/*if(a.checkPhone(string)==0)
