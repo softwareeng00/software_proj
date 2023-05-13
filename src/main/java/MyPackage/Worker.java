@@ -33,14 +33,9 @@ public class Worker {
 			passWorker.add("123");
 		}
 	
-	public void creatWorker(String name,String address,int phone,String date,String email,String password )
+	public void creatWorker(String name,String address,int phone,String email,String password )
 	{
-	this.setName(name);
-	this.setAdder(address);
-	this.setPhone(phone);
-	
-	this.setEmail(email);
-	this.setPassword(password);
+
 	if(!workerList.contains(this))
 		workerList.add(this);
 	}
@@ -70,7 +65,7 @@ public class Worker {
 	{
 		return password;
 	}
-	public void setPassword(String password) {
+	public static void setPassword(String password) {
 		Worker.password = password;
 		if (!passWorker.contains(password))
 			passWorker.add(password);
@@ -132,7 +127,7 @@ public class Worker {
 		return name;
 	}
 
-	public void setName(String name) {
+	public static void setName(String name) {
 		Worker.name = name;
 	}
 
@@ -143,7 +138,7 @@ public class Worker {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public static  void setPhone(int phone) {
 		Worker.phone = phone;
 	}
 
@@ -151,7 +146,7 @@ public class Worker {
 		return adder;
 	}
 
-	public void setAdder(String adder) {
+	public static void setAdder(String adder) {
 		Worker.adder = adder;
 	}
 
