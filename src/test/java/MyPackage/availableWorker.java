@@ -5,9 +5,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class availableWorker {
-	int ay;
+	
 	public static boolean flagworker=false;
 
+	
+	
+	
 	
 
 
@@ -25,7 +28,7 @@ public void worker_enter_here_information_workername_worker_address_worker_phone
 	Worker.getPhone();
 	Worker.getAdder();
 	
-	W.creatWorker(string, string2, int1, string3,string4,string5);
+	W.creatWorker(string, string2, int1,string4,string5);
 	flagworker=true;
 }
 
