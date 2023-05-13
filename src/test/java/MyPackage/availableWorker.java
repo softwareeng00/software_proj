@@ -5,11 +5,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class availableWorker {
-	
+	int ay;
 	public static boolean flagworker=false;
 
 	
-
+	/// all edit+ scenario has no task
 	
 	
 
