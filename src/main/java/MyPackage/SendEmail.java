@@ -34,7 +34,6 @@ public class SendEmail {
 	    props.put("mail.debug", "true");
 	    props.put("mail.store.protocol", "pop3");
 	    props.put("mail.transport.protocol", "smtp");
-	    props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 	    props.put("mail.smtp.starttls.enable","true"); 
 	   
 	    final String username ="ahmadawwadza7@gmail.com" ;
