@@ -9,9 +9,6 @@ public class availableWorker {
 	public static boolean flagworker=false;
 
 	
-	/// all edit+ scenario has no task
-	
-	
 
 
 @Given("the workerdoesnt has any prduct to clean")
