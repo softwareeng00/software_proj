@@ -185,7 +185,11 @@ public class ProductMain {
 						try {
 							Customer.user1.get(i);
 							if(Customer.addresss.equals("Nablus") ){
-								semaphore.await(1, TimeUnit.SECONDS);
+								boolean a= semaphore.await(1, TimeUnit.SECONDS);
+								if(a)
+								{
+									logger.info("Reach");
+								}
 								}
 							
 						} catch (InterruptedException e) {
