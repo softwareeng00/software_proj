@@ -178,14 +178,14 @@ public class ProductMain {
 			return completed;
 		}
 	public static void delivary() {
-				
+		 CountDownLatch semaphore = new CountDownLatch(1);
 				for(int i=0;i<prod.size();i++)
-				{
+				{Customer.addresss="Nablus";
 					
 						try {
 							Customer.user1.get(i);
-							if(Customer.addresss.equals("Nablus")){
-							TimeUnit.MINUTES.sleep(1);
+							if(Customer.addresss.equals("Nablus") ){
+								semaphore.await(1, TimeUnit.SECONDS);
 								}
 							
 						} catch (InterruptedException e) {
