@@ -9,15 +9,37 @@ public class availableWorker {
 	public static boolean flagworker=false;
 
 	
+	/// all edit+ scenario has no task
+	
 	
 
-@Given("the workerdoesnt has any prduct to clean {string}")
-public void the_workerdoesnt_has_any_prduct_to_clean(String string) {
-  flagworker =true;
+
+@Given("the workerdoesnt has any prduct to clean")
+public void the_workerdoesnt_has_any_prduct_to_clean() {
+  
 }
+@Given("Worker enter here information  Workername {string},WorkerAddress {string},WorkerPhoneNumber {int}, Workerdate {string}, Workeremail {string} , Workerpass {string}")
+public void worker_enter_here_information_workername_worker_address_worker_phone_number_workerdate_workeremail_workerpass(String string, String string2, Integer int1, String string3, String string4, String string5) {
+	Worker.printWorker();
+	Worker.workerName();
+	Worker.prodinclean();
+	Worker.getPassword();
+	Worker W=new Worker();
+	Worker.getPhone();
+	Worker.getAdder();
+	
+	W.creatWorker(string, string2, int1, string3,string4,string5);
+	flagworker=true;
+}
+
+
+
+
 
 @Given("the worker not in a break")
 public void the_worker_not_in_a_break() {
+	Worker.breakTime();
+
 	  flagworker =true;
 }
 
@@ -28,6 +50,7 @@ public void the_worker_with_id_can_start_cleaning() {
 
 @Then("the worker with {string} can start clean the product")
 public void the_worker_with_can_start_clean_the_product(String string) {
+	
   assertTrue(  flagworker);
 }
 
